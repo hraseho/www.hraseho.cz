@@ -1,9 +1,86 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>SVJ Hrašeho 918-922</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<style type=text/css>
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  margin: 0;
+}
+h1 {
+  display: inline-block;
+  margin: 0;
+  padding: 4em 1em 1em 0.5em;
+  width: 100%;
+  background-image: url('img/bg-plan-min.jpg');
+  font-size: 60pt;
+}
+@media (max-width: 50em) {
+  h1 {
+    padding-top: 1em;
+  }
+}
+a {
+  color: #333;
+}
+#facts {
+  max-width: 50em;
+  display: flex;
+  flex-direction: column;
+  font-size: 16pt;
+  margin: 1em;
+  background: linear-gradient(#aaa, #aaa) no-repeat center/2px 100%;
+  padding: 1em 0 1em 0;
+}
+#facts .one {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0.3em;
+}
+#facts .one .left {
+  width: 50%;
+  text-align: right;
+  padding-right: 1em;
+}
+#facts .one .right {
+  width: 50%;
+  text-align: left;
+  padding-left: 1em;
+}
+</style>
 </head>
 <body>
 <h1>SVJ Hrašeho 918-922</h1>
-<p>...zde někdy zveřejní nějaké informace.</p>
+<div id=facts>
+  <div class=one>
+    <div class=left>Parkování</div>
+    <div class=right><a href=https://svj.fanc.cz/>rezervační systém</a></div>
+  </div>
+  <div class=one>
+    <div class=left>Komunikace s&nbsp;ostatními sousedy</div>
+    <div class=right><a href=https://www.sousede.cz/moje-domy/6078>sousede.cz</a></div>
+  </div>
+  <div class=one>
+    <div class=left>Správa a administrativa</div>
+    <div class=right><a href=mailto:omatyasova@tvoeurope.com>Olga Matyášová</a>, TVO Europe</div>
+  </div>
+  <div class=one>
+    <div class=left>Výbor</div>
+    <div class=right><a href=mailto:svj@hraseho.cz>svj@hraseho.cz</a></div>
+  </div>
+  <div class=one>
+    <div class=left>IČO</div>
+    <div class=right><a href=https://ares.gov.cz/ekonomicke-subjekty?ico=17284678>17284678</a></div>
+  </div>
+</div>
 </body>
 </html>
