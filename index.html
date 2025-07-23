@@ -56,7 +56,54 @@ a {
   text-align: left;
   padding-left: 1em;
 }
+#calendar {
+ max-width: 100em;
+ margin-left: 1em;
+ margin-right: 1em;
+}
 </style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.4.0/ical.min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/rrule@2.7.1/dist/es5/rrule.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.0.3/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/icalendar@6.0.3/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/rrule@6.0.3/index.global.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var calendarEl = document.getElementById("calendar");
+
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: "listWeek",
+    locale: 'cs',
+    selectable: true,
+    headerToolbar: {
+      left: "prev,next today",
+      center: "title",
+      right: "dayGridMonth,listWeek",
+    },
+    events: {
+      url: "https://api.hraseho.cz/svj.ics",
+      format: "ics",
+    },
+    eventContent: (arg) => {
+      if (arg.view.type == 'listWeek') {
+        var buf = arg.event.title
+        if (arg.event.extendedProps.location) {
+          buf += '<br />⚑ ' + arg.event.extendedProps.location + '</i>';
+        }
+        if (arg.event.extendedProps.description) {
+          buf += '<br />' + arg.event.extendedProps.description;
+        }
+        return {html: buf};
+      }
+      return arg.event.title;
+    },
+  });
+
+  calendar.render();
+});
+</script>
 </head>
 <body>
 <h1>SVJ Hrašeho 918-922</h1>
@@ -82,5 +129,6 @@ a {
     <div class=right><a href=https://ares.gov.cz/ekonomicke-subjekty?ico=17284678>17284678</a></div>
   </div>
 </div>
+<div id='calendar'></div>
 </body>
 </html>
