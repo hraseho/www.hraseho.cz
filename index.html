@@ -74,11 +74,12 @@ document.addEventListener("DOMContentLoaded", function () {
   var calendarEl = document.getElementById("calendar");
 
   var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: "listMonth",
+    initialView: "list",
+    duration: { months: 2 },
     locale: 'cs',
     selectable: true,
     headerToolbar: {
-      left: "listMonth,multiMonthYear",
+      left: "list,multiMonthYear",
       center: "title",
       right: "",
     },
