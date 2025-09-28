@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVJ Hrašeho 918-922 - Vizualizace finančních toků</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+    <script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Intro Screen Styles */
+        .intro-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .logo-section {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .building-icon {
+            width: 4rem;
+            height: 4rem;
+            margin-bottom: 20px;
+            display: block;
+            color: #3498db;
+            margin: 0 auto 20px auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        .upload-area {
+            border: 3px dashed #3498db;
+            border-radius: 4px;
+            padding: 60px 40px;
+            background: #f8f9fa;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .upload-area:hover {
+            border-color: #2980b9;
+            background: #e3f2fd;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+        }
+
+        .upload-area.dragover {
+            border-color: #27ae60;
+            background: #e8f5e8;
+        }
+
+        .upload-icon {
+            width: 3rem;
+            height: 3rem;
+            color: #3498db;
+            margin-bottom: 20px;
+            display: block;
+            margin: 0 auto 20px auto;
+        }
+
+        .upload-text {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .upload-hint {
+            color: #7f8c8d;
+            font-size: 1rem;
+        }
+
+        .help-text {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 4px;
+            color: #2c3e50;
+        }
+
+        .tip {
+            background: rgba(52, 152, 219, 0.1);
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        /* Loading Screen */
+        .loading-screen {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: white;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255,255,255,0.3);
+            border-top: 5px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Main Visualization Styles */
+        .main-view {
+            display: none;
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        .header h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .new-file-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .new-file-btn:hover {
+            background: #2980b9;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+        }
+
+        .stats-panel {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 4px;
+            border-left: 4px solid #3498db;
+            flex: 1;
+            min-width: 200px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .visualization-container {
+            background: white;
+            border-radius: 4px;
+            padding: 20px;
+            min-height: 600px;
+            border: 1px solid #e9ecef;
+        }
+
+        /* Hidden file input */
+        #fileInput {
+            display: none;
+        }
+
+        /* Error styles */
+        .error {
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: none;
+        }
+
+        /* Sankey specific styles */
+        .node rect {
+            cursor: pointer;
+            fill-opacity: .9;
+            shape-rendering: crispEdges;
+        }
+
+        .node text {
+            pointer-events: none;
+            text-shadow: 0 1px 0 #fff;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .link {
+            fill: none;
+            stroke: #000;
+            stroke-opacity: .2;
+            cursor: pointer;
+        }
+
+        .link:hover {
+            stroke-opacity: .5;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: absolute;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            border-radius: 6px;
+            pointer-events: none;
+            font-size: 12px;
+            max-width: 250px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Single page container */
+        .pages-container {
+            width: 100%;
+        }
+
+        .page {
+            width: 100%;
+        }
+
+        /* Monthly breakdown table */
+        .monthly-table-container {
+            background: white;
+            border-radius: 4px;
+            padding: 20px;
+            margin-top: 30px;
+            border: 1px solid #e9ecef;
+            display: none; /* Hidden by default */
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .monthly-table-container.visible {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .table-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+            border-radius: 4px;
+            border: 1px solid #dee2e6;
+        }
+
+        .monthly-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .monthly-table th {
+            background: #f8f9fa;
+            padding: 12px 8px;
+            text-align: center;
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid #dee2e6;
+            white-space: nowrap;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .folder-header {
+            text-align: left !important;
+            min-width: 200px;
+            position: sticky;
+            left: 0;
+            background: #f8f9fa !important;
+            z-index: 11;
+        }
+
+        .total-header {
+            background: #e3f2fd !important;
+            color: #1976d2 !important;
+        }
+
+        .monthly-table td {
+            padding: 8px;
+            border-bottom: 1px solid #dee2e6;
+            text-align: center;
+        }
+
+        .monthly-table .folder-cell {
+            text-align: left;
+            font-weight: 600;
+            background: white;
+            position: sticky;
+            left: 0;
+            z-index: 5;
+        }
+
+        .monthly-table .amount-cell {
+            font-family: 'Courier New', monospace;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .monthly-table .total-cell {
+            font-weight: 700;
+            background: #e3f2fd;
+        }
+
+        .expense-name-cell {
+            text-align: left;
+            background: white;
+            position: sticky;
+            left: 0;
+            z-index: 5;
+            min-width: 250px;
+            padding: 8px 12px;
+        }
+
+        .expense-name {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 2px;
+            line-height: 1.3;
+            font-size: 0.95em;
+        }
+
+        .expense-supplier {
+            font-size: 0.8em;
+            color: #7f8c8d;
+            font-style: normal;
+            line-height: 1.2;
+            font-weight: 400;
+        }
+
+        .amount.negative {
+            color: #27ae60; /* Green for refunds/credits (good for budget) */
+            font-weight: 600;
+        }
+
+        .amount.positive {
+            color: #e74c3c; /* Red for expenses (bad for budget) */
+        }
+
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .logo-section {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .upload-area {
+                padding: 40px 20px;
+            }
+
+            .stats-panel {
+                flex-direction: column;
+            }
+
+            .page-navigation {
+                padding: 0 20px;
+            }
+
+            .nav-arrow {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Intro Screen -->
+        <div class="intro-screen" id="introScreen">
+            <div class="logo-section">
+                <i data-lucide="building-2" class="building-icon"></i>
+                <h1>SVJ Hrašeho 918-922</h1>
+                <div class="subtitle">Vizualizace finančních toků</div>
+
+                <div class="upload-area" id="uploadArea">
+                    <i data-lucide="bar-chart-3" class="upload-icon"></i>
+                    <div class="upload-text">Přetáhněte CSV nebo Excel soubor</div>
+                    <div class="upload-hint">nebo klikněte pro výběr</div>
+                </div>
+
+                <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" />
+            </div>
+
+            <div class="help-text">
+                <div><strong>Podporované formáty:</strong> Excel (.xlsx, .xls) nebo CSV - Export z Domsys</div>
+
+                <div class="tip">
+                    <strong><i data-lucide="lightbulb" style="width: 16px; height: 16px; display: inline; vertical-align: text-bottom; margin-right: 4px;"></i>Jak získat data z Domsys:</strong>
+                    <ol style="margin: 10px 0 0 20px; line-height: 1.4;">
+                        <li>Přihlašte se na portál <a href="https://www.domsys.eu/" target="_blank" style="color: #3498db; text-decoration: none;">Domsys</a></li>
+                        <li>Přejděte do sekce <strong>"Náš dům"</strong></li>
+                        <li>Klikněte na <strong>"Náklady složek"</strong></li>
+                        <li>Vyberte <strong>"Vše"</strong> pro kompletní export</li>
+                        <li>Klikněte na ikonu <strong>💾</strong> úplně vpravo (Export)</li>
+                        <li>Zvolte <strong>"Exportovat do excelu"</strong></li>
+                    </ol>
+                    <div style="margin-top: 18px; font-size: 0.9em; color: #6c757d;">
+                        <strong>Příklad názvu souboru:</strong> export_Náklady_složek_2025_2025-09-28.xlsx
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Screen -->
+        <div class="loading-screen" id="loadingScreen">
+            <div class="spinner"></div>
+            <div>Zpracovávám data...</div>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error" id="errorMessage"></div>
+
+        <!-- Main Visualization -->
+        <div class="main-view" id="mainView">
+            <div class="header">
+                <h2 id="mainTitle">SVJ Hrašeho 918-922</h2>
+                <button class="new-file-btn" id="newFileBtn">Načíst nový soubor</button>
+            </div>
+
+            <div class="stats-panel" id="statsPanel">
+                <!-- Stats will be populated by JavaScript -->
+            </div>
+
+            <!-- Pages Container -->
+            <div class="pages-container" id="pagesContainer">
+                <!-- Page 1: Sankey Diagram -->
+                <div class="page" id="page1">
+                    <div class="visualization-container">
+                        <h3 class="sunburst-title">Toky finančních prostředků (Sankey diagram)</h3>
+                        <svg id="sankeyChart"></svg>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Monthly Breakdown Table -->
+            <div class="monthly-table-container" id="monthlyTableContainer">
+                <h3 class="table-title">Měsíční rozpad nákladů podle složek</h3>
+                <div class="table-scroll">
+                    <table class="monthly-table" id="monthlyTable">
+                        <thead>
+                            <tr>
+                                <th class="folder-header">Výdaj / Dodavatel</th>
+                                <th>Led</th>
+                                <th>Úno</th>
+                                <th>Bře</th>
+                                <th>Dub</th>
+                                <th>Kvě</th>
+                                <th>Čer</th>
+                                <th>Čec</th>
+                                <th>Srp</th>
+                                <th>Zář</th>
+                                <th>Říj</th>
+                                <th>Lis</th>
+                                <th>Pro</th>
+                                <th class="total-header">Celkem</th>
+                            </tr>
+                        </thead>
+                        <tbody id="monthlyTableBody">
+                            <!-- Table rows will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        // Global variables
+        let csvData = null;
+        let processedData = null;
+        let currentPage = 1;
+        const totalPages = 1;
+
+        // SVJ constants
+        const UNITS_COUNT = 148; // Number of apartments in SVJ
+
+        // Czech number formatting - preserve sign for accurate financial display
+        const formatCurrency = (amount) => {
+            return new Intl.NumberFormat('cs-CZ', {
+                style: 'currency',
+                currency: 'CZK',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(amount);
+        };
+
+        const formatNumber = (num) => {
+            return new Intl.NumberFormat('cs-CZ').format(Math.abs(num));
+        };
+
+        // DOM elements
+        const introScreen = document.getElementById('introScreen');
+        const loadingScreen = document.getElementById('loadingScreen');
+        const mainView = document.getElementById('mainView');
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const newFileBtn = document.getElementById('newFileBtn');
+        const errorMessage = document.getElementById('errorMessage');
+        const tooltip = document.getElementById('tooltip');
+
+        // Pages container (single page)
+        const pagesContainer = document.getElementById('pagesContainer');
+
+        // File handling
+        uploadArea.addEventListener('click', () => fileInput.click());
+        uploadArea.addEventListener('dragover', handleDragOver);
+        uploadArea.addEventListener('drop', handleDrop);
+        uploadArea.addEventListener('dragleave', handleDragLeave);
+        fileInput.addEventListener('change', handleFileSelect);
+        newFileBtn.addEventListener('click', resetToIntro);
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        }
+
+        function handleDragLeave(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                processFile(files[0]);
+            }
+        }
+
+        function handleFileSelect(e) {
+            const files = e.target.files;
+            if (files.length > 0) {
+                processFile(files[0]);
+            }
+        }
+
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.style.display = 'block';
+            setTimeout(() => {
+                errorMessage.style.display = 'none';
+            }, 5000);
+        }
+
+        function showLoading() {
+            introScreen.style.display = 'none';
+            loadingScreen.style.display = 'flex';
+            mainView.style.display = 'none';
+        }
+
+        function showVisualization() {
+            introScreen.style.display = 'none';
+            loadingScreen.style.display = 'none';
+            mainView.style.display = 'block';
+        }
+
+        function resetToIntro() {
+            introScreen.style.display = 'flex';
+            loadingScreen.style.display = 'none';
+            mainView.style.display = 'none';
+            fileInput.value = '';
+            csvData = null;
+            processedData = null;
+            currentPage = 1;
+        }
+
+
+        function processFile(file) {
+            const fileName = file.name.toLowerCase();
+            const isExcel = fileName.endsWith('.xlsx') || fileName.endsWith('.xls');
+            const isCsv = fileName.endsWith('.csv');
+
+            if (!isExcel && !isCsv) {
+                showError('Prosím nahrajte CSV nebo Excel soubor (.csv, .xlsx, .xls).');
+                return;
+            }
+
+            showLoading();
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    let parsedData;
+
+                    if (isExcel) {
+                        console.log('Processing Excel file...');
+                        parsedData = parseExcel(e.target.result);
+                    } else {
+                        console.log('Processing CSV file...');
+                        const csvText = e.target.result;
+                        console.log('CSV Text length:', csvText.length);
+                        parsedData = parseCSV(csvText);
+                    }
+
+                    console.log('Parsed rows:', parsedData.length);
+                    csvData = parsedData;
+
+                    // Process data for Sankey visualization
+                    processedData = processDataForSankey(csvData);
+                    console.log('Processed data:', processedData);
+
+                    if (processedData.totalAmount === 0) {
+                        throw new Error('No valid financial data found in file');
+                    }
+
+                    renderVisualization();
+                    showVisualization();
+                } catch (error) {
+                    console.error('Error processing file:', error);
+                    showError(`Chyba při zpracování souboru: ${error.message}`);
+                    resetToIntro();
+                }
+            };
+
+            if (isExcel) {
+                reader.readAsArrayBuffer(file);
+            } else {
+                reader.readAsText(file);
+            }
+        }
+
+        function parseExcel(arrayBuffer) {
+            console.log('Reading Excel file with SheetJS...');
+
+            // Read Excel workbook
+            const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+            const firstSheetName = workbook.SheetNames[0];
+            const worksheet = workbook.Sheets[firstSheetName];
+
+            console.log('First sheet name:', firstSheetName);
+
+            // Convert worksheet to JSON with header row
+            const rawData = XLSX.utils.sheet_to_json(worksheet, {
+                header: 1, // Use first row as headers
+                defval: '', // Default value for empty cells
+                raw: false // Parse values as strings to preserve formatting
+            });
+
+            console.log('Raw Excel data rows:', rawData.length);
+
+            if (rawData.length < 2) {
+                throw new Error('Excel file appears to be empty or has no data rows');
+            }
+
+            // Get headers from first row
+            const headers = rawData[0];
+            console.log('Excel headers:', headers);
+
+            // Filter out summary/total rows and convert to objects
+            const data = [];
+            const summaryKeywords = ['součet', 'celkem', 'total', 'suma', 'subtotal', 'grand total'];
+
+            for (let i = 1; i < rawData.length; i++) {
+                const row = rawData[i];
+
+                // Skip empty rows
+                if (!row || row.length === 0 || row.every(cell => !cell || cell.toString().trim() === '')) {
+                    console.log(`Skipping empty row ${i}`);
+                    continue;
+                }
+
+                // Check if this row contains summary keywords
+                const rowText = row.join(' ').toLowerCase();
+                const containsSummary = summaryKeywords.some(keyword => rowText.includes(keyword));
+
+                if (containsSummary) {
+                    console.log(`Stopping at summary row ${i}: "${rowText.substring(0, 50)}..."`);
+                    break; // Stop parsing when we hit summary rows
+                }
+
+                // Convert row to object using headers
+                const rowObj = {};
+                headers.forEach((header, index) => {
+                    const value = row[index] || '';
+                    rowObj[header] = value.toString().trim();
+                });
+
+                // Skip rows that don't have essential data (no amount or category)
+                const amount = parseAmount(rowObj['Částka nákladu'] || rowObj['Amount'] || '');
+                const category = rowObj['Složka'] || rowObj['Category'] || '';
+
+                if (amount !== 0 && category && category !== 'Složka' && category !== '') {
+                    data.push(rowObj);
+                } else if (i < 5) {
+                    console.log(`Skipping row ${i} - no valid amount or category:`, {
+                        amount,
+                        category,
+                        row: rowObj
+                    });
+                }
+            }
+
+            console.log(`Excel parsing complete: ${data.length} valid data rows from ${rawData.length - 1} total rows`);
+            return data;
+        }
+
+        function parseCSV(csvText) {
+            const lines = csvText.trim().split('\n');
+
+            // Parse header line with BOM handling
+            const headerLine = lines[0];
+            let headers;
+
+            // More robust CSV parsing for the specific format
+            if (headerLine.includes(';')) {
+                headers = headerLine.split(';');
+                // Remove BOM if present
+                if (headers[0].charCodeAt(0) === 0xFEFF) {
+                    headers[0] = headers[0].substring(1);
+                }
+            } else {
+                throw new Error('Invalid CSV format - no semicolon separators found');
+            }
+
+            const data = [];
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue; // Skip empty lines
+
+                // More careful parsing because amounts contain semicolons
+                const values = parseCSVLine(line);
+
+                if (values.length >= 14) { // Ensure we have enough columns
+                    const row = {};
+                    headers.forEach((header, index) => {
+                        row[header.trim()] = values[index] ? values[index].trim() : '';
+                    });
+                    data.push(row);
+                }
+            }
+            return data;
+        }
+
+        function parseCSVLine(line) {
+            const values = [];
+            let current = '';
+            let inQuotes = false;
+            let i = 0;
+
+            // Handle the specific format where last two columns contain amounts with semicolons
+            const parts = line.split(';');
+
+            // For this specific CSV format, we know the structure:
+            // First 14 columns are separated by semicolons normally
+            // Last 2 columns (Částka dokladu, Částka nákladu) contain amounts that may have semicolons
+
+            if (parts.length >= 14) {
+                // Take first 14 parts normally
+                for (let j = 0; j < 14; j++) {
+                    values.push(parts[j] || '');
+                }
+
+                // Reconstruct the last two columns by joining remaining parts
+                const remainingParts = parts.slice(14);
+                if (remainingParts.length >= 2) {
+                    // The format is typically "amount1; amount2" in the last part
+                    const lastPart = remainingParts.join(';');
+                    const amountMatch = lastPart.match(/^(.+?);(.+)$/);
+                    if (amountMatch) {
+                        values.push(amountMatch[1].trim()); // Částka dokladu
+                        values.push(amountMatch[2].trim()); // Částka nákladu
+                    } else {
+                        values.push(lastPart);
+                        values.push('');
+                    }
+                } else {
+                    values.push(remainingParts.join(';') || '');
+                    values.push('');
+                }
+            }
+
+            return values;
+        }
+
+        function processDataForSankey(data) {
+            // Category mapping - 5 logical categories based on business logic
+            const categoryMap = {
+                // 1. Energie a média (Utilities)
+                'Zálohy - elektro 2025': 'Energie a média',
+                'Zálohy - teplo 2025': 'Energie a média',
+                'Zálohy - voda 2025': 'Energie a média',
+                'Teplo 2024': 'Energie a média',
+                'Wallboxy': 'Energie a média',
+                'Elektrická energie - dům': 'Energie a média',
+                'Elektrická energie - garážové stání': 'Energie a média',
+                'Elektrická energie - sklep': 'Energie a média',
+                'Studená voda': 'Energie a média',
+                'Teplá voda': 'Energie a média',
+                'Teplo - byty': 'Energie a média',
+                '[EVS] Zálohy - elektro 2025 (do 31.12.2025)': 'Energie a média',
+                '[EVS] Zálohy - teplo 2025 (do 31.12.2025)': 'Energie a média',
+                '[EVS] Zálohy - voda 2025 (do 31.12.2025)': 'Energie a média',
+
+                // 2. Údržba a opravy (Maintenance & Repairs)
+                'Fond oprav': 'Údržba a opravy',
+                'Materiál na údržbu': 'Údržba a opravy',
+                'Výtah - provoz': 'Údržba a opravy',
+                'Revize, servisy, prohlídky': 'Údržba a opravy',
+                'Vyúčtování 2024': 'Údržba a opravy',
+
+                // 3. Úklid a údržba pozemků (Cleaning & Grounds)
+                'Úklid - dům': 'Úklid a údržba pozemků',
+                'Mytí garáží': 'Úklid a údržba pozemků',
+                'Zimní úklid': 'Úklid a údržba pozemků',
+                'Péče o zeleň': 'Úklid a údržba pozemků',
+                'Odvoz odpadu': 'Úklid a údržba pozemků',
+
+                // 4. Správa a administrativa (Management & Administration)
+                'Správní poplatek - byt': 'Správa a administrativa',
+                'Správní poplatek - garážové stání': 'Správa a administrativa',
+                'Správní poplatek - sklep': 'Správa a administrativa',
+                'Technická správa': 'Správa a administrativa',
+                'Odměny členům výboru': 'Správa a administrativa',
+
+                // 5. Ostatní provozní náklady (Other Operating Costs)
+                'Pojištění budovy': 'Ostatní provozní náklady',
+                'Ostatní náklady': 'Ostatní provozní náklady'
+            };
+
+            // Process the data
+            const categoryTotals = new Map();
+            const subcategoryTotals = new Map();
+            let totalAmount = 0;
+
+            data.forEach((row, index) => {
+                const amountStr = row['Částka nákladu'];
+                const amount = parseAmount(amountStr);
+                const subcategory = row['Složka'] || 'Ostatní';
+                const mainCategory = categoryMap[subcategory] || 'Ostatní provozní náklady';
+
+                // Skip empty subcategories or header rows
+                if (!subcategory || subcategory === 'Složka' || subcategory === '') {
+                    return;
+                }
+
+                // Debug first few rows
+                if (index < 3) {
+                    console.log(`Row ${index}:`, {
+                        subcategory,
+                        mainCategory,
+                        amountStr,
+                        amount,
+                        parsedCorrectly: amount > 0
+                    });
+                }
+
+                if (amount !== 0 && subcategory !== 'Ostatní') {
+                    totalAmount += amount;
+
+                    // Add to main category
+                    if (!categoryTotals.has(mainCategory)) {
+                        categoryTotals.set(mainCategory, 0);
+                    }
+                    categoryTotals.set(mainCategory, categoryTotals.get(mainCategory) + amount);
+
+                    // Add to subcategory
+                    const subKey = `${mainCategory}::${subcategory}`;
+                    if (!subcategoryTotals.has(subKey)) {
+                        subcategoryTotals.set(subKey, 0);
+                    }
+                    subcategoryTotals.set(subKey, subcategoryTotals.get(subKey) + amount);
+                } else if (index < 10) {
+                    console.warn(`Row ${index} has zero amount:`, { subcategory, amountStr, amount });
+                }
+            });
+
+            // Create nodes and links for Sankey
+            const nodes = [];
+            const links = [];
+            const nodeMap = new Map();
+
+            // Add root node
+            nodes.push({ name: 'Celkové náklady SVJ', value: totalAmount });
+            nodeMap.set('Celkové náklady SVJ', 0);
+
+            // Add category nodes
+            let nodeIndex = 1;
+            for (const [category, amount] of categoryTotals) {
+                nodes.push({ name: category, value: amount });
+                nodeMap.set(category, nodeIndex);
+
+                // Link from root to category
+                links.push({
+                    source: 0,
+                    target: nodeIndex,
+                    value: amount
+                });
+
+                nodeIndex++;
+            }
+
+            // Add subcategory nodes and links (only for significant amounts)
+            const minThreshold = totalAmount * 0.005; // Show subcategories > 0.5% of total
+            console.log('Minimum threshold for subcategories:', formatCurrency(minThreshold));
+
+            for (const [subKey, amount] of subcategoryTotals) {
+                const [category, subcategory] = subKey.split('::');
+
+                // Only show subcategories that are different from main category and significant
+                if (subcategory !== category && amount > minThreshold) {
+                    console.log(`Adding subcategory: ${subcategory} (${formatCurrency(amount)})`);
+                    nodes.push({ name: subcategory, value: amount });
+                    nodeMap.set(subcategory, nodeIndex);
+
+                    // Link from category to subcategory
+                    links.push({
+                        source: nodeMap.get(category),
+                        target: nodeIndex,
+                        value: amount
+                    });
+
+                    nodeIndex++;
+                }
+            }
+
+            console.log('Final Sankey structure:', {
+                totalNodes: nodes.length,
+                totalLinks: links.length,
+                totalAmount: formatCurrency(totalAmount),
+                categories: Array.from(categoryTotals.entries()).map(([k, v]) => `${k}: ${formatCurrency(v)}`)
+            });
+
+            return {
+                nodes,
+                links,
+                totalAmount,
+                categoryTotals: Array.from(categoryTotals.entries()),
+                rawData: data
+            };
+        }
+
+        function parseAmount(amountStr) {
+            if (!amountStr) return 0;
+
+            // Handle Czech number format: "561 700,00 Kč" or "- 561 700,00 Kč"
+            // First extract just the numeric part (with spaces, commas, dots, minus)
+            const numericMatch = amountStr.match(/[-]?\s*[\d\s]+[,.]?\d*/);
+            if (!numericMatch) return 0;
+
+            let numericPart = numericMatch[0];
+
+            // Remove spaces (used as thousands separators in Czech)
+            numericPart = numericPart.replace(/\s/g, '');
+
+            // Replace Czech decimal comma with dot
+            numericPart = numericPart.replace(',', '.');
+
+            // Handle the case where it might be just a whole number
+            const amount = parseFloat(numericPart);
+
+            // Preserve original sign - negative amounts might be refunds or adjustments
+            return isNaN(amount) ? 0 : amount;
+        }
+
+
+        function renderVisualization() {
+            if (!processedData) return;
+
+            // Update stats panel
+            updateStatsPanel();
+
+            // Render visualization with slight delay to ensure DOM is ready
+            setTimeout(() => {
+                renderSankey();
+            }, 100);
+        }
+
+        function updateStatsPanel() {
+            const statsPanel = document.getElementById('statsPanel');
+            const { totalAmount, categoryTotals } = processedData;
+
+            // Calculate actual period from data (detect months from dates in CSV)
+            const monthsInData = getActualMonthCount(csvData);
+            const monthlyAverage = totalAmount / monthsInData;
+            const perUnitMonthly = monthlyAverage / UNITS_COUNT;
+            const perUnitTotal = totalAmount / UNITS_COUNT;
+
+            const periodLabel = monthsInData === 12 ? 'celý rok 2025' : `${monthsInData} měsíců (skutečné období)`;
+
+            statsPanel.innerHTML = `
+                <div class="stat-card" title="Celkové náklady za skutečné období dat">
+                    <div class="stat-value">${formatCurrency(totalAmount)}</div>
+                    <div class="stat-label">Celkové náklady za ${periodLabel}</div>
+                </div>
+                <div class="stat-card" title="Vypočítáno jako: celkové náklady ÷ ${monthsInData} měsíců">
+                    <div class="stat-value">${formatCurrency(monthlyAverage)}</div>
+                    <div class="stat-label">Průměrné měsíční náklady</div>
+                </div>
+                <div class="stat-card" title="Vypočítáno jako: (celkové náklady ÷ ${monthsInData} měsíců) ÷ 148 bytů">
+                    <div class="stat-value">${formatCurrency(perUnitMonthly)}</div>
+                    <div class="stat-label">Průměr na byt měsíčně</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${processedData.rawData.length}</div>
+                    <div class="stat-label">Celkem transakcí</div>
+                </div>
+            `;
+        }
+
+        function getActualMonthCount(data) {
+            const months = new Set();
+
+            // Get current date to determine which months have actually passed
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            const currentMonth = now.getMonth() + 1; // Convert to 1-12
+
+            data.forEach((row, index) => {
+                const dateStr = row['Datum'] || '';
+                if (dateStr && dateStr.trim()) {
+                    let parsedDate = null;
+
+                    // Try multiple date parsing strategies
+                    // 1. CSV format: DD.MM.YYYY, DD/MM/YYYY, DD-MM-YYYY
+                    const csvMatch = dateStr.match(/(\d{1,2})[./-](\d{1,2})[./-](\d{4})/);
+                    if (csvMatch) {
+                        const day = parseInt(csvMatch[1]);
+                        const month = parseInt(csvMatch[2]);
+                        const year = parseInt(csvMatch[3]);
+                        parsedDate = new Date(year, month - 1, day); // JavaScript uses 0-based months
+                    }
+                    // 2. Excel serial number format (days since 1900-01-01)
+                    else if (/^\d+(\.\d+)?$/.test(dateStr.trim())) {
+                        const excelDate = parseFloat(dateStr);
+                        // Excel date serial number to JavaScript Date
+                        // Excel day 1 = Jan 1, 1900 (but Excel incorrectly treats 1900 as leap year)
+                        parsedDate = new Date((excelDate - 25569) * 86400 * 1000); // 25569 = days between 1900-01-01 and 1970-01-01
+                    }
+                    // 3. ISO format: YYYY-MM-DD
+                    else if (dateStr.match(/^\d{4}-\d{2}-\d{2}/)) {
+                        parsedDate = new Date(dateStr);
+                    }
+                    // 4. Try parsing as a regular date string
+                    else {
+                        parsedDate = new Date(dateStr);
+                    }
+
+                    // Validate the parsed date and extract month/year
+                    if (parsedDate && !isNaN(parsedDate.getTime())) {
+                        const month = parsedDate.getMonth() + 1; // Convert to 1-12
+                        const year = parsedDate.getFullYear();
+
+                        // Only count months from 2025 that have actually passed (or current month)
+                        if (year === 2025 && month <= currentMonth) {
+                            months.add(month);
+                        }
+
+                        // Debug first few successful parses
+                        if (index < 3 && year === 2025) {
+                            console.log(`Date parse success [${index}]: "${dateStr}" -> ${month}/${year}`);
+                        }
+                    } else if (index < 10) {
+                        console.log(`Date parse failed [${index}]: "${dateStr}"`);
+                    }
+                }
+            });
+
+            // Debug logs to see what's happening
+            console.log('Current date:', now.toLocaleDateString('cs-CZ'));
+            console.log('Current month:', currentMonth);
+            console.log('Unique months found in data:', Array.from(months).sort());
+            console.log('Final month count:', months.size);
+
+            return months.size > 0 ? months.size : currentMonth; // Fallback to current month if no dates found
+        }
+
+        function renderSankey() {
+            const { nodes, links } = processedData;
+
+            // Clear previous chart
+            d3.select("#sankeyChart").selectAll("*").remove();
+
+            // Set dimensions with fallback
+            const margin = { top: 20, right: 20, bottom: 20, left: 20 };
+            const container = document.querySelector('.visualization-container');
+            const containerWidth = container ? container.offsetWidth : 1200; // fallback width
+            const width = Math.max(800, containerWidth - margin.left - margin.right); // minimum 800px
+            const height = 600 - margin.top - margin.bottom;
+
+            console.log('Sankey dimensions:', { containerWidth, width, height });
+
+            // Create SVG
+            const svg = d3.select("#sankeyChart")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom);
+
+            const g = svg.append("g")
+                .attr("transform", `translate(${margin.left},${margin.top})`);
+
+            // Create sankey generator
+            const sankey = d3.sankey()
+                .nodeWidth(20)
+                .nodePadding(20)
+                .extent([[1, 1], [width - 1, height - 6]]);
+
+            // Process data
+            const { nodes: sankeyNodes, links: sankeyLinks } = sankey({
+                nodes: nodes.map(d => Object.assign({}, d)),
+                links: links.map(d => Object.assign({}, d))
+            });
+
+            // Color scale for 5 logical categories
+            const color = d3.scaleOrdinal()
+                .domain(['Energie a média', 'Údržba a opravy', 'Úklid a údržba pozemků', 'Správa a administrativa', 'Ostatní provozní náklady'])
+                .range(['#3498db', '#e74c3c', '#27ae60', '#e67e22', '#9b59b6']);
+
+            // Draw links
+            g.append("g")
+                .selectAll("path")
+                .data(sankeyLinks)
+                .join("path")
+                .attr("d", d3.sankeyLinkHorizontal())
+                .attr("stroke", d => color(d.source.name))
+                .attr("stroke-width", d => Math.max(1, d.width))
+                .attr("fill", "none")
+                .attr("stroke-opacity", 0.3)
+                .on("mouseover", function(event, d) {
+                    d3.select(this).attr("stroke-opacity", 0.7);
+                    showTooltip(event, `${d.source.name} → ${d.target.name}<br/>${formatCurrency(d.value)}`);
+                })
+                .on("mouseout", function(event, d) {
+                    d3.select(this).attr("stroke-opacity", 0.3);
+                    hideTooltip();
+                });
+
+            // Draw nodes
+            const node = g.append("g")
+                .selectAll("rect")
+                .data(sankeyNodes)
+                .join("rect")
+                .attr("x", d => d.x0)
+                .attr("y", d => d.y0)
+                .attr("height", d => d.y1 - d.y0)
+                .attr("width", d => d.x1 - d.x0)
+                .attr("fill", d => color(d.name))
+                .attr("stroke", "#000")
+                .attr("stroke-width", 1)
+                .attr("cursor", "pointer")
+                .on("mouseover", function(event, d) {
+                    const percentage = ((d.value / processedData.totalAmount) * 100).toFixed(1);
+                    showTooltip(event, `${d.name}<br/>${formatCurrency(d.value)} (${percentage}%)<br/><em>Klikněte pro zobrazení tabulky</em>`);
+                })
+                .on("mouseout", hideTooltip)
+                .on("click", function(event, d) {
+                    handleSankeyClick(d);
+                });
+
+            // Add node labels
+            g.append("g")
+                .selectAll("text")
+                .data(sankeyNodes)
+                .join("text")
+                .attr("x", d => d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6)
+                .attr("y", d => (d.y1 + d.y0) / 2)
+                .attr("dy", "0.35em")
+                .attr("text-anchor", d => d.x0 < width / 2 ? "start" : "end")
+                .attr("font-size", "12px")
+                .attr("font-weight", "600")
+                .attr("fill", "#2c3e50")
+                .text(d => d.name)
+                .filter(d => d.y1 - d.y0 > 20) // Only show labels for larger nodes
+                .append("tspan")
+                .attr("x", d => d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6)
+                .attr("dy", "1.2em")
+                .attr("font-size", "10px")
+                .attr("font-weight", "normal")
+                .attr("fill", "#7f8c8d")
+                .text(d => formatCurrency(d.value));
+        }
+
+        function handleSankeyClick(node) {
+            console.log('Clicked node:', node);
+
+            // Show the table container
+            const tableContainer = document.getElementById('monthlyTableContainer');
+            tableContainer.classList.add('visible');
+
+            // Update table title
+            const tableTitle = document.querySelector('.table-title');
+            tableTitle.textContent = `Měsíční rozpad nákladů - ${node.name}`;
+
+            // Render filtered table based on clicked node
+            renderFilteredMonthlyTable(node);
+
+            // Add visual feedback to selected node
+            highlightSelectedNode(node);
+
+            // Scroll to table
+            tableContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function highlightSelectedNode(selectedNode) {
+            // Reset all node highlighting
+            d3.selectAll('#sankeyChart rect').attr('stroke-width', 1).attr('stroke', '#000');
+
+            // Highlight selected node
+            d3.selectAll('#sankeyChart rect')
+                .filter(d => d.name === selectedNode.name)
+                .attr('stroke-width', 3)
+                .attr('stroke', '#2c3e50');
+        }
+
+        function renderFilteredMonthlyTable(filterNode) {
+            const tableBody = document.getElementById('monthlyTableBody');
+
+            // Clear existing rows
+            tableBody.innerHTML = '';
+
+            // Get expenses based on filter type
+            let expensesToShow = [];
+
+            if (filterNode.name === 'Celkové náklady SVJ') {
+                // Show all expenses if root node is clicked
+                expensesToShow = csvData.filter(row => {
+                    const amount = parseAmount(row['Částka nákladu'] || '');
+                    const subcategory = row['Složka'] || '';
+                    return amount !== 0 && subcategory && subcategory !== 'Složka' && subcategory !== '';
+                });
+            } else {
+                // Filter expenses by category or subcategory
+                expensesToShow = csvData.filter(row => {
+                    const subcategory = row['Složka'] || '';
+                    const amount = parseAmount(row['Částka nákladu'] || '');
+
+                    if (amount === 0 || !subcategory || subcategory === 'Složka') return false;
+
+                    // Check if this expense matches the selected node
+                    if (subcategory === filterNode.name) {
+                        return true; // Direct subcategory match
+                    }
+
+                    // Check if it matches by main category - use same mapping as Sankey processing
+                    const categoryMap = {
+                        // 1. Energie a média (Utilities)
+                        'Zálohy - elektro 2025': 'Energie a média',
+                        'Zálohy - teplo 2025': 'Energie a média',
+                        'Zálohy - voda 2025': 'Energie a média',
+                        'Teplo 2024': 'Energie a média',
+                        'Wallboxy': 'Energie a média',
+                        'Elektrická energie - dům': 'Energie a média',
+                        'Elektrická energie - garážové stání': 'Energie a média',
+                        'Elektrická energie - sklep': 'Energie a média',
+                        'Studená voda': 'Energie a média',
+                        'Teplá voda': 'Energie a média',
+                        'Teplo - byty': 'Energie a média',
+                        '[EVS] Zálohy - elektro 2025 (do 31.12.2025)': 'Energie a média',
+                        '[EVS] Zálohy - teplo 2025 (do 31.12.2025)': 'Energie a média',
+                        '[EVS] Zálohy - voda 2025 (do 31.12.2025)': 'Energie a média',
+
+                        // 2. Údržba a opravy (Maintenance & Repairs)
+                        'Fond oprav': 'Údržba a opravy',
+                        'Materiál na údržbu': 'Údržba a opravy',
+                        'Výtah - provoz': 'Údržba a opravy',
+                        'Revize, servisy, prohlídky': 'Údržba a opravy',
+                        'Vyúčtování 2024': 'Údržba a opravy',
+
+                        // 3. Úklid a údržba pozemků (Cleaning & Grounds)
+                        'Úklid - dům': 'Úklid a údržba pozemků',
+                        'Mytí garáží': 'Úklid a údržba pozemků',
+                        'Zimní úklid': 'Úklid a údržba pozemků',
+                        'Péče o zeleň': 'Úklid a údržba pozemků',
+                        'Odvoz odpadu': 'Úklid a údržba pozemků',
+
+                        // 4. Správa a administrativa (Management & Administration)
+                        'Správní poplatek - byt': 'Správa a administrativa',
+                        'Správní poplatek - garážové stání': 'Správa a administrativa',
+                        'Správní poplatek - sklep': 'Správa a administrativa',
+                        'Technická správa': 'Správa a administrativa',
+                        'Odměny členům výboru': 'Správa a administrativa',
+
+                        // 5. Ostatní provozní náklady (Other Operating Costs)
+                        'Pojištění budovy': 'Ostatní provozní náklady',
+                        'Ostatní náklady': 'Ostatní provozní náklady'
+                    };
+
+                    const mainCategory = categoryMap[subcategory] || 'Ostatní provozní náklady';
+                    return mainCategory === filterNode.name;
+                });
+            }
+
+            console.log(`Filtered expenses for ${filterNode.name}:`, expensesToShow.length);
+
+            if (expensesToShow.length === 0) {
+                const row = document.createElement('tr');
+                const cell = document.createElement('td');
+                cell.colSpan = 14; // All columns
+                cell.textContent = 'Žádné výdaje pro vybranou kategorii';
+                cell.style.textAlign = 'center';
+                cell.style.color = '#7f8c8d';
+                cell.style.fontStyle = 'italic';
+                row.appendChild(cell);
+                tableBody.appendChild(row);
+                return;
+            }
+
+            // Group expenses by unique identifier (name + supplier + amount)
+            const expenseGroups = new Map();
+
+            expensesToShow.forEach(expense => {
+                // Extract expense name and supplier based on actual CSV structure
+                const name = expense['Název'] || expense['Text'] || expense['Popis'] || expense['Poznámka'] || expense['Číslo'] || 'Neznámý výdaj';
+                // Use the actual supplier field from CSV
+                const supplier = expense['Dodavatel'] || expense['Firma'] || expense['Kontaktní osoba'] || 'Neznámý dodavatel';
+                const amount = parseAmount(expense['Částka nákladu'] || '');
+                const dateStr = expense['Datum'] || expense['Datum splatnosti'] || expense['Date'] || '';
+
+                // Extract month from date using same logic as getActualMonthCount
+                let month = 0; // Default to first column if no date
+                if (dateStr && dateStr.trim()) {
+                    let parsedDate = null;
+
+                    // Try multiple date parsing strategies (same as getActualMonthCount)
+                    // 1. CSV format: DD.MM.YYYY, DD/MM/YYYY, DD-MM-YYYY
+                    const csvMatch = dateStr.match(/(\d{1,2})[./-](\d{1,2})[./-](\d{4})/);
+                    if (csvMatch) {
+                        const day = parseInt(csvMatch[1]);
+                        const monthNum = parseInt(csvMatch[2]);
+                        const year = parseInt(csvMatch[3]);
+                        parsedDate = new Date(year, monthNum - 1, day); // JavaScript uses 0-based months
+                    }
+                    // 2. Excel serial number format (days since 1900-01-01)
+                    else if (/^\d+(\.\d+)?$/.test(dateStr.trim())) {
+                        const excelDate = parseFloat(dateStr);
+                        // Excel date serial number to JavaScript Date
+                        parsedDate = new Date((excelDate - 25569) * 86400 * 1000);
+                    }
+                    // 3. ISO format: YYYY-MM-DD
+                    else if (dateStr.match(/^\d{4}-\d{2}-\d{2}/)) {
+                        parsedDate = new Date(dateStr);
+                    }
+                    // 4. Try parsing as a regular date string
+                    else {
+                        parsedDate = new Date(dateStr);
+                    }
+
+                    // Extract month if parsing was successful
+                    if (parsedDate && !isNaN(parsedDate.getTime())) {
+                        month = parsedDate.getMonth(); // 0-11 based for array indexing
+                        if (month < 0 || month > 11) month = 0;
+                    }
+                }
+
+                const key = `${name}-${supplier}-${amount}`;
+
+                if (!expenseGroups.has(key)) {
+                    expenseGroups.set(key, {
+                        name,
+                        supplier,
+                        amount,
+                        months: new Array(12).fill(0)
+                    });
+                }
+
+                expenseGroups.get(key).months[month] += amount;
+            });
+
+            // Create table rows
+            for (const [key, expense] of expenseGroups) {
+                const row = document.createElement('tr');
+
+                // Expense name cell
+                const nameCell = document.createElement('td');
+                nameCell.className = 'expense-name-cell';
+                nameCell.innerHTML = `
+                    <div class="expense-name">${expense.name}</div>
+                    <div class="expense-supplier">${expense.supplier}</div>
+                `;
+                row.appendChild(nameCell);
+
+                // Monthly columns
+                let totalAmount = 0;
+                for (let month = 0; month < 12; month++) {
+                    const monthCell = document.createElement('td');
+                    monthCell.className = 'amount-cell';
+
+                    if (expense.months[month] !== 0) {
+                        const cssClass = expense.months[month] < 0 ? 'amount negative' : 'amount positive';
+                        monthCell.innerHTML = `<div class="${cssClass}">${formatCurrency(expense.months[month])}</div>`;
+                        totalAmount += expense.months[month];
+                    } else {
+                        monthCell.innerHTML = '-';
+                    }
+
+                    row.appendChild(monthCell);
+                }
+
+                // Total column
+                const totalCell = document.createElement('td');
+                totalCell.className = 'amount-cell total-cell';
+                const totalCssClass = totalAmount < 0 ? 'amount negative' : 'amount positive';
+                totalCell.innerHTML = `<div class="${totalCssClass}">${formatCurrency(totalAmount)}</div>`;
+                row.appendChild(totalCell);
+
+                tableBody.appendChild(row);
+            }
+        }
+
+        function showTooltip(event, content) {
+            tooltip.innerHTML = content;
+            tooltip.style.left = (event.pageX + 10) + 'px';
+            tooltip.style.top = (event.pageY - 10) + 'px';
+            tooltip.style.opacity = 1;
+        }
+
+        function hideTooltip() {
+            tooltip.style.opacity = 0;
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (processedData && mainView.style.display === 'block') {
+                setTimeout(() => {
+                    renderSankey();
+                }, 100);
+            }
+        });
+
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        // Initialize
+        console.log('SVJ Finance Visualization initialized');
+    </script>
+</body>
+</html>
