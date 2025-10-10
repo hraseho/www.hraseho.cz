@@ -482,6 +482,8 @@
                 </div>
 
                 <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" />
+
+		<input type="button" id="loadPredefined" value="Načíst předem uložená data" />
             </div>
 
             <div class="help-text">
@@ -617,6 +619,8 @@
         fileInput.addEventListener('change', handleFileSelect);
         newFileBtn.addEventListener('click', resetToIntro);
 
+        document.getElementById('loadPredefined').addEventListener('click', loadDefaultData);
+
         function handleDragOver(e) {
             e.preventDefault();
             uploadArea.classList.add('dragover');
@@ -726,6 +730,18 @@
             } else {
                 reader.readAsText(file);
             }
+        }
+
+        async function getFileFromUrl(url, name){
+            const response = await fetch(url);
+            const data = await response.blob();
+            return new File([data], name, {});
+        }
+
+        async function loadDefaultData() {
+            const file = await getFileFromUrl('./naklady-slozek-2025.xlsx', 'naklady-slozek-2025.xlsx');
+            console.log(file);
+            processFile(file);
         }
 
         function parseExcel(arrayBuffer) {
@@ -1533,6 +1549,7 @@
 
         // Initialize
         console.log('SVJ Finance Visualization initialized');
+        document.getElementById('loadPredefined').click();
     </script>
 </body>
 </html>
