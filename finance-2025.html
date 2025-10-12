@@ -922,21 +922,23 @@
             'Revize, servisy, prohlídky': 'Údržba a opravy',
             'Vyúčtování 2024': 'Údržba a opravy',
 
-            // 3. Úklid a údržba pozemků (Cleaning & Grounds)
-            'Úklid - dům': 'Úklid a údržba pozemků',
-            'Mytí garáží': 'Úklid a údržba pozemků',
-            'Zimní úklid': 'Úklid a údržba pozemků',
-            'Péče o zeleň': 'Úklid a údržba pozemků',
-            'Odvoz odpadu': 'Úklid a údržba pozemků',
+            // 3. Úklid
+            'Úklid - dům': 'Úklid',
+            'Mytí garáží': 'Úklid',
+            'Odvoz odpadu': 'Úklid',
 
-            // 4. Správa a administrativa (Management & Administration)
+            // 4. Zeleň
+            'Zimní úklid': 'Zeleň',
+            'Péče o zeleň': 'Zeleň',
+
+            // 5. Správa a administrativa (Management & Administration)
             'Správní poplatek - byt': 'Správa a administrativa',
             'Správní poplatek - garážové stání': 'Správa a administrativa',
             'Správní poplatek - sklep': 'Správa a administrativa',
             'Technická správa': 'Správa a administrativa',
             'Odměny členům výboru': 'Správa a administrativa',
 
-            // 5. Ostatní provozní náklady (Other Operating Costs)
+            // 6. Ostatní provozní náklady (Other Operating Costs)
             'Pojištění budovy': 'Ostatní provozní náklady',
             'Ostatní náklady': 'Ostatní provozní náklady'
         };
@@ -1226,8 +1228,8 @@
 
             // Color scale for 5 logical categories
             const color = d3.scaleOrdinal()
-                .domain(['Energie a média', 'Údržba a opravy', 'Úklid a údržba pozemků', 'Správa a administrativa', 'Ostatní provozní náklady'])
-                .range(['#3498db', '#e74c3c', '#27ae60', '#e67e22', '#9b59b6']);
+                .domain(['Energie a média', 'Údržba a opravy', 'Úklid', 'Zeleň', 'Správa a administrativa', 'Ostatní provozní náklady'])
+                .range(['#3498db', '#e74c3c', '#aa6633', '#27ae60', '#e67e22', '#9b59b6']);
 
             // Draw links
             g.append("g")
