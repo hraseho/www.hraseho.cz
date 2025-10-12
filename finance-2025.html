@@ -897,51 +897,51 @@
             return values;
         }
 
+        // Category mapping - 5 logical categories based on business logic
+        const categoryMap = {
+            // 1. Energie a média (Utilities)
+            'Zálohy - elektro 2025': 'Energie a média',
+            'Zálohy - teplo 2025': 'Energie a média',
+            'Zálohy - voda 2025': 'Energie a média',
+            'Teplo 2024': 'Energie a média',
+            'Wallboxy': 'Energie a média',
+            'Elektrická energie - dům': 'Energie a média',
+            'Elektrická energie - garážové stání': 'Energie a média',
+            'Elektrická energie - sklep': 'Energie a média',
+            'Studená voda': 'Energie a média',
+            'Teplá voda': 'Energie a média',
+            'Teplo - byty': 'Energie a média',
+            '[EVS] Zálohy - elektro 2025 (do 31.12.2025)': 'Energie a média',
+            '[EVS] Zálohy - teplo 2025 (do 31.12.2025)': 'Energie a média',
+            '[EVS] Zálohy - voda 2025 (do 31.12.2025)': 'Energie a média',
+
+            // 2. Údržba a opravy (Maintenance & Repairs)
+            'Fond oprav': 'Údržba a opravy',
+            'Materiál na údržbu': 'Údržba a opravy',
+            'Výtah - provoz': 'Údržba a opravy',
+            'Revize, servisy, prohlídky': 'Údržba a opravy',
+            'Vyúčtování 2024': 'Údržba a opravy',
+
+            // 3. Úklid a údržba pozemků (Cleaning & Grounds)
+            'Úklid - dům': 'Úklid a údržba pozemků',
+            'Mytí garáží': 'Úklid a údržba pozemků',
+            'Zimní úklid': 'Úklid a údržba pozemků',
+            'Péče o zeleň': 'Úklid a údržba pozemků',
+            'Odvoz odpadu': 'Úklid a údržba pozemků',
+
+            // 4. Správa a administrativa (Management & Administration)
+            'Správní poplatek - byt': 'Správa a administrativa',
+            'Správní poplatek - garážové stání': 'Správa a administrativa',
+            'Správní poplatek - sklep': 'Správa a administrativa',
+            'Technická správa': 'Správa a administrativa',
+            'Odměny členům výboru': 'Správa a administrativa',
+
+            // 5. Ostatní provozní náklady (Other Operating Costs)
+            'Pojištění budovy': 'Ostatní provozní náklady',
+            'Ostatní náklady': 'Ostatní provozní náklady'
+        };
+
         function processDataForSankey(data) {
-            // Category mapping - 5 logical categories based on business logic
-            const categoryMap = {
-                // 1. Energie a média (Utilities)
-                'Zálohy - elektro 2025': 'Energie a média',
-                'Zálohy - teplo 2025': 'Energie a média',
-                'Zálohy - voda 2025': 'Energie a média',
-                'Teplo 2024': 'Energie a média',
-                'Wallboxy': 'Energie a média',
-                'Elektrická energie - dům': 'Energie a média',
-                'Elektrická energie - garážové stání': 'Energie a média',
-                'Elektrická energie - sklep': 'Energie a média',
-                'Studená voda': 'Energie a média',
-                'Teplá voda': 'Energie a média',
-                'Teplo - byty': 'Energie a média',
-                '[EVS] Zálohy - elektro 2025 (do 31.12.2025)': 'Energie a média',
-                '[EVS] Zálohy - teplo 2025 (do 31.12.2025)': 'Energie a média',
-                '[EVS] Zálohy - voda 2025 (do 31.12.2025)': 'Energie a média',
-
-                // 2. Údržba a opravy (Maintenance & Repairs)
-                'Fond oprav': 'Údržba a opravy',
-                'Materiál na údržbu': 'Údržba a opravy',
-                'Výtah - provoz': 'Údržba a opravy',
-                'Revize, servisy, prohlídky': 'Údržba a opravy',
-                'Vyúčtování 2024': 'Údržba a opravy',
-
-                // 3. Úklid a údržba pozemků (Cleaning & Grounds)
-                'Úklid - dům': 'Úklid a údržba pozemků',
-                'Mytí garáží': 'Úklid a údržba pozemků',
-                'Zimní úklid': 'Úklid a údržba pozemků',
-                'Péče o zeleň': 'Úklid a údržba pozemků',
-                'Odvoz odpadu': 'Úklid a údržba pozemků',
-
-                // 4. Správa a administrativa (Management & Administration)
-                'Správní poplatek - byt': 'Správa a administrativa',
-                'Správní poplatek - garážové stání': 'Správa a administrativa',
-                'Správní poplatek - sklep': 'Správa a administrativa',
-                'Technická správa': 'Správa a administrativa',
-                'Odměny členům výboru': 'Správa a administrativa',
-
-                // 5. Ostatní provozní náklady (Other Operating Costs)
-                'Pojištění budovy': 'Ostatní provozní náklady',
-                'Ostatní náklady': 'Ostatní provozní náklady'
-            };
-
             // Process the data
             const categoryTotals = new Map();
             const subcategoryTotals = new Map();
@@ -1353,50 +1353,6 @@
                     if (subcategory === filterNode.name) {
                         return true; // Direct subcategory match
                     }
-
-                    // Check if it matches by main category - use same mapping as Sankey processing
-                    const categoryMap = {
-                        // 1. Energie a média (Utilities)
-                        'Zálohy - elektro 2025': 'Energie a média',
-                        'Zálohy - teplo 2025': 'Energie a média',
-                        'Zálohy - voda 2025': 'Energie a média',
-                        'Teplo 2024': 'Energie a média',
-                        'Wallboxy': 'Energie a média',
-                        'Elektrická energie - dům': 'Energie a média',
-                        'Elektrická energie - garážové stání': 'Energie a média',
-                        'Elektrická energie - sklep': 'Energie a média',
-                        'Studená voda': 'Energie a média',
-                        'Teplá voda': 'Energie a média',
-                        'Teplo - byty': 'Energie a média',
-                        '[EVS] Zálohy - elektro 2025 (do 31.12.2025)': 'Energie a média',
-                        '[EVS] Zálohy - teplo 2025 (do 31.12.2025)': 'Energie a média',
-                        '[EVS] Zálohy - voda 2025 (do 31.12.2025)': 'Energie a média',
-
-                        // 2. Údržba a opravy (Maintenance & Repairs)
-                        'Fond oprav': 'Údržba a opravy',
-                        'Materiál na údržbu': 'Údržba a opravy',
-                        'Výtah - provoz': 'Údržba a opravy',
-                        'Revize, servisy, prohlídky': 'Údržba a opravy',
-                        'Vyúčtování 2024': 'Údržba a opravy',
-
-                        // 3. Úklid a údržba pozemků (Cleaning & Grounds)
-                        'Úklid - dům': 'Úklid a údržba pozemků',
-                        'Mytí garáží': 'Úklid a údržba pozemků',
-                        'Zimní úklid': 'Úklid a údržba pozemků',
-                        'Péče o zeleň': 'Úklid a údržba pozemků',
-                        'Odvoz odpadu': 'Úklid a údržba pozemků',
-
-                        // 4. Správa a administrativa (Management & Administration)
-                        'Správní poplatek - byt': 'Správa a administrativa',
-                        'Správní poplatek - garážové stání': 'Správa a administrativa',
-                        'Správní poplatek - sklep': 'Správa a administrativa',
-                        'Technická správa': 'Správa a administrativa',
-                        'Odměny členům výboru': 'Správa a administrativa',
-
-                        // 5. Ostatní provozní náklady (Other Operating Costs)
-                        'Pojištění budovy': 'Ostatní provozní náklady',
-                        'Ostatní náklady': 'Ostatní provozní náklady'
-                    };
 
                     const mainCategory = categoryMap[subcategory] || 'Ostatní provozní náklady';
                     return mainCategory === filterNode.name;
