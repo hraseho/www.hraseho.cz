@@ -1017,7 +1017,8 @@
             }
 
             // Add subcategory nodes and links (only for significant amounts)
-            const minThreshold = totalAmount * 0.005; // Show subcategories > 0.5% of total
+            // const minThreshold = totalAmount * 0.005; // Show subcategories > 0.5% of total
+            const minThreshold = 0; // let's not hide anything, e.g., garden maintenance
             console.log('Minimum threshold for subcategories:', formatCurrency(minThreshold));
 
             for (const [subKey, amount] of subcategoryTotals) {
