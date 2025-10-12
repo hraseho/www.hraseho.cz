@@ -423,6 +423,14 @@
             font-weight: 400;
         }
 
+        .expense-category {
+            font-size: 0.8em;
+            color: #7f8c8d;
+            font-style: normal;
+            line-height: 1.2;
+            font-weight: 400;
+        }
+
         .amount.negative {
             color: #27ae60; /* Green for refunds/credits (good for budget) */
             font-weight: 600;
@@ -1387,6 +1395,7 @@
                 const supplier = expense['Dodavatel'] || expense['Firma'] || expense['Kontaktní osoba'] || 'Neznámý dodavatel';
                 const amount = parseAmount(expense['Částka nákladu'] || '');
                 const dateStr = expense['Datum'] || expense['Datum splatnosti'] || expense['Date'] || '';
+                const category = expense['Složka'] || 'Neurčeno';
 
                 // Extract month from date using same logic as getActualMonthCount
                 let month = 0; // Default to first column if no date
@@ -1424,11 +1433,12 @@
                     }
                 }
 
-                const key = `${name}-${supplier}-${amount}`;
+                const key = `${name}-${category}-${supplier}-${amount}`;
 
                 if (!expenseGroups.has(key)) {
                     expenseGroups.set(key, {
                         name,
+                        category,
                         supplier,
                         amount,
                         months: new Array(12).fill(0)
@@ -1447,6 +1457,7 @@
                 nameCell.className = 'expense-name-cell';
                 nameCell.innerHTML = `
                     <div class="expense-name">${expense.name}</div>
+                    <div class="expense-category">${expense.category}</div>
                     <div class="expense-supplier">${expense.supplier}</div>
                 `;
                 row.appendChild(nameCell);
