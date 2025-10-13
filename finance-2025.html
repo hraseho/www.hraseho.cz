@@ -1111,24 +1111,22 @@
             const perUnitMonthly = monthlyAverage / UNITS_COUNT;
             const perUnitTotal = totalAmount / UNITS_COUNT;
 
-            const periodLabel = monthsInData === 12 ? 'celý rok 2025' : `${monthsInData} měsíců (skutečné období)`;
-
             statsPanel.innerHTML = `
-                <div class="stat-card" title="Celkové náklady za skutečné období dat">
+                <div class="stat-card" title="Zahrnuty jsou některé známé budoucí zálohy, ale i platby z minulých období">
                     <div class="stat-value">${formatCurrency(totalAmount)}</div>
-                    <div class="stat-label">Celkové náklady za ${periodLabel}</div>
-                </div>
-                <div class="stat-card" title="Vypočítáno jako: celkové náklady ÷ ${monthsInData} měsíců">
-                    <div class="stat-value">${formatCurrency(monthlyAverage)}</div>
-                    <div class="stat-label">Průměrné měsíční náklady</div>
-                </div>
-                <div class="stat-card" title="Vypočítáno jako: (celkové náklady ÷ ${monthsInData} měsíců) ÷ 148 bytů">
-                    <div class="stat-value">${formatCurrency(perUnitMonthly)}</div>
-                    <div class="stat-label">Průměr na byt měsíčně</div>
+                    <div class="stat-label">Výše průbežně zaevidovaných nákladů</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value">${processedData.rawData.length}</div>
                     <div class="stat-label">Celkem transakcí</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">13. října 2025</div>
+                    <div class="stat-label">Poslední aktualizace z&nbsp;Domsys</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">Diagram je klikací</div>
+                    <div class="stat-label">Zobrazí se detailní přehled plateb, jež patří do vybrané kategorie</div>
                 </div>
             `;
         }
