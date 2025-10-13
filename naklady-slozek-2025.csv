@@ -10,11 +10,18 @@ Doklad;2025-11-22;;;;PRE 30504109;Pražská energetika, a.s.;Zálohy - elektro 2
 Doklad;2025-11-22;;;;PRE 30504123;Pražská energetika, a.s.;Zálohy - elektro 2025;;;30504123.0;;výchozí;;-8050.0;8050.0
 Doklad;2025-11-01;;;;Teplo 11/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-475900.0;475900.0
 Doklad;2025-10-09;;2025001.0;;Přefakturace - planý výjezd;Duffková Vendula;Ostatní náklady;;;2025001.0;nákladyProvozní;výchozí;;2955.0;-2955.0
+Doklad;2025-10-09;;;;Zahradnické práce;Ing. Jindřich Mládek;Péče o zeleň;;;2025138.0;péčeZeleň;výchozí;;-18523.0;18523.0
 Doklad;2025-10-08;;;;Revize PBZ;STAPA - Pavel STAŠ;Revize, servisy, prohlídky;;;25010223.0;revize-servis;výchozí;;-50723.2;50723.2
-Doklad;2025-10-05;;;;Odměny 9/25;Odměny;Odměny členům výboru;;;;;výchozí;;-32112.0;32112.0
 Doklad;2025-10-02;;;;HZS - planý poplach;Hasičský záchranný sbor hlavního města Prahy;Ostatní náklady;;;413662025.0;nákladyProvozní;výchozí;;-2955.0;2955.0
 Doklad;2025-10-01;;;;Teplo 10/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-411500.0;411500.0
 Doklad;2025-10-01;;;;PVK záloha 10-12/25;Pražské vodovody a kanalizace, a.s.;Zálohy - voda 2025;;;4001131376.0;;výchozí;;-486030.0;486030.0
+Doklad;2025-10-01;;;;Odměny 9/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-3600.0;3600.0
+Doklad;2025-10-01;;;;Odměny 9/25 - OSSZ - Sociální pojištění;Odměny;Odměny členům výboru;;;1182281731.0;;výchozí;;-7656.0;7656.0
+Doklad;2025-10-01;;;;Odměny 9/25 - VZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-2160.0;2160.0
+Doklad;2025-10-01;;;;Odměny 9/25 - OZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-1080.0;1080.0
+Doklad;2025-10-01;;;;Odměny 9/25 - Holešáková Petra;Odměny;Odměny členům výboru;;;251900061.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-10-01;;;;Odměny 9/25 - Sekničková Jana;Odměny;Odměny členům výboru;;;251900062.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-10-01;;;;Odměny 9/25 - Kundrát Jan;Odměny;Odměny členům výboru;;;251900063.0;;výchozí;;-5872.0;5872.0
 Doklad;2025-09-30;;;;Správa 9/25;TVO Europe Holdings a.s.;Správní poplatek - byt;;;25990581.0;správa-Dům;výchozí;;-154179.85;44478.31
 Doklad;2025-09-30;;;;Správa 9/25;TVO Europe Holdings a.s.;Správní poplatek - garážové stání;;;25990581.0;správa-GS;výchozí;;-154179.85;8797.31
 Doklad;2025-09-30;;;;Správa 9/25;TVO Europe Holdings a.s.;Správní poplatek - sklep;;;25990581.0;správa-Sklep;výchozí;;-154179.85;8141.61
@@ -23,18 +30,24 @@ Doklad;2025-09-30;;;;Správa 9/25;TVO Europe Holdings a.s.;Technická správa;;;
 Doklad;2025-09-30;;;;Správa 9/25;TVO Europe Holdings a.s.;Úklid - dům;;;25990581.0;úklid-Dům;výchozí;;-154179.85;39135.74
 Doklad;2025-09-30;;;;Servis výtahů 7-9/25;KONE, a.s.;Výtah - provoz;;;800506679.0;výtah;výchozí;;-39792.29;17614.8
 Doklad;2025-09-30;;;;Servis výtahů 7-9/25;KONE, a.s.;Revize, servisy, prohlídky;;;800506679.0;revize-servis;výchozí;;-39792.29;22177.49
-Doklad;2025-09-30;;;;Patrol 9/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602002427.0;revize-servis;výchozí;;-4008.49;4008.49
-Doklad;2025-09-30;;;;Patrol 9/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602002426.0;revize-servis;výchozí;;-616.74;616.74
+Doklad;2025-09-30;;;;Servis, revize a kontrola zařízení dálkového přenosu na PCO - 9/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602002427.0;revize-servis;výchozí;;-4008.49;4008.49
+Doklad;2025-09-30;;;;Napojení EPS na pult centralizované ochrany (PCO) - 9/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602002426.0;revize-servis;výchozí;;-616.74;616.74
 Účet;2025-09-30;;;FIO - SÚ;Nespárovaný příjem (Připsaný úrok);;Fond oprav;;;0.0;;výchozí;;4027.32;-4027.32
 Účet;2025-09-30;;;FIO - SÚ;Nespárovaný výdaj (Odvod daně z úroků);;Fond oprav;;;0.0;;výchozí;;-845.73;845.73
 Doklad;2025-09-30;;;;Střežení objektu 10-12/25;Hasičský záchranný sbor hlavního města Prahy;Revize, servisy, prohlídky;;;17284678.0;revize-servis;výchozí;;-9657.0;9657.0
 Doklad;2025-09-24;;;;Inspekce nemovitosti - doplatek;Nemoinspekt Bytové domy s.r.o.;Revize, servisy, prohlídky;;;110025090.0;revize-servis;výchozí;;-31520.0;31520.0
 Doklad;2025-09-18;;;;Přefakturace;TVO Europe Holdings a.s.;Materiál na údržbu;;;25990562.0;material;výchozí;;-229.0;229.0
 Doklad;2025-09-12;;;;Údržba vrat;Martin Schubert;Revize, servisy, prohlídky;;;1015571.0;revize-servis;výchozí;;-3024.0;3024.0
-Doklad;2025-09-05;;;;Odměny 8/25;Odměny;Odměny členům výboru;;;;;výchozí;;-32112.0;32112.0
 Doklad;2025-09-03;;;;Záloha - inspekce nemovitosti;Nemoinspekt Bytové domy s.r.o.;Revize, servisy, prohlídky;;;10025047.0;revize-servis;výchozí;;-31521.0;31521.0
 Doklad;2025-09-02;;;;PVK - nedoplatek 9/24-9/25;Pražské vodovody a kanalizace, a.s.;Zálohy - voda 2025;;;2542097401.0;;výchozí;;-112830.0;112830.0
 Doklad;2025-09-01;;;;Teplo 09/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-239900.0;239900.0
+Doklad;2025-09-01;;;;Odměny 8/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-3600.0;3600.0
+Doklad;2025-09-01;;;;Odměny 8/25 - OSSZ - Sociální pojištění;Odměny;Odměny členům výboru;;;1182281731.0;;výchozí;;-7656.0;7656.0
+Doklad;2025-09-01;;;;Odměny 8/25 - VZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-2160.0;2160.0
+Doklad;2025-09-01;;;;Odměny 8/25 - OZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-1080.0;1080.0
+Doklad;2025-09-01;;;;Odměny 8/25 - Holešáková Petra;Odměny;Odměny členům výboru;;;251900054.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-09-01;;;;Odměny 8/25 - Sekničková Jana;Odměny;Odměny členům výboru;;;251900055.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-09-01;;;;Odměny 8/25 - Kundrát Jan;Odměny;Odměny členům výboru;;;251900056.0;;výchozí;;-5872.0;5872.0
 Účet;2025-08-31;;;FIO - SÚ;Nespárovaný příjem (Připsaný úrok);;Fond oprav;;;0.0;;výchozí;;4100.61;-4100.61
 Účet;2025-08-31;;;FIO - SÚ;Nespárovaný výdaj (Odvod daně z úroků);;Fond oprav;;;0.0;;výchozí;;-861.12;861.12
 Doklad;2025-08-31;;;;Správa 8/25;TVO Europe Holdings a.s.;Správní poplatek - byt;;;25990521.0;správa-Dům;výchozí;;-154179.85;44478.31
@@ -43,8 +56,8 @@ Doklad;2025-08-31;;;;Správa 8/25;TVO Europe Holdings a.s.;Správní poplatek - 
 Doklad;2025-08-31;;;;Správa 8/25;TVO Europe Holdings a.s.;Odvoz odpadu;;;25990521.0;odvozOdpadu;výchozí;;-154179.85;3902.98
 Doklad;2025-08-31;;;;Správa 8/25;TVO Europe Holdings a.s.;Technická správa;;;25990521.0;Tech-spr;výchozí;;-154179.85;49723.9
 Doklad;2025-08-31;;;;Správa 8/25;TVO Europe Holdings a.s.;Úklid - dům;;;25990521.0;úklid-Dům;výchozí;;-154179.85;39135.74
-Doklad;2025-08-31;;;;Patrol 8/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602002001.0;revize-servis;výchozí;;-4008.49;4008.49
-Doklad;2025-08-31;;;;Patrol 8/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602002000.0;revize-servis;výchozí;;-616.74;616.74
+Doklad;2025-08-31;;;;Servis, revize a kontrola zařízení dálkového přenosu na PCO - 8/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602002001.0;revize-servis;výchozí;;-4008.49;4008.49
+Doklad;2025-08-31;;;;Napojení EPS na pult centralizované ochrany (PCO) - 8/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602002000.0;revize-servis;výchozí;;-616.74;616.74
 Doklad;2025-08-28;;;;Deratizace;Radek Bláha;Revize, servisy, prohlídky;;;25212025.0;revize-servis;výchozí;;-5520.0;5520.0
 Doklad;2025-08-28;;;;Deratizace;Radek Bláha;Revize, servisy, prohlídky;;;25215025.0;revize-servis;výchozí;;-3200.0;3200.0
 Doklad;2025-08-26;;;;PRE 30504109;Pražská energetika, a.s.;Zálohy - elektro 2025;;;30504109.0;;výchozí;;-14280.0;14280.0
@@ -59,28 +72,40 @@ Doklad;2025-08-18;;;;Plechy proti ptactvu;BAK stavební společnost, a.s.;Ostatn
 Doklad;2025-08-18;;;;Oprava sloupku - zápočet;MAXUS LIGHT s.r.o.;Ostatní náklady;;;2300065.0;nákladyProvozní;výchozí;;-28387.0;28387.0
 Doklad;2025-08-10;;;;Zahradnické práce;Ing. Jindřich Mládek;Péče o zeleň;;;2025126.0;péčeZeleň;výchozí;;-13195.0;13195.0
 Doklad;2025-08-07;;;;Revize - elektrospotřebiče;Svarc Innovations s.r.o.;Revize, servisy, prohlídky;;;125279.0;revize-servis;výchozí;;-1998.92;1998.92
-Doklad;2025-08-05;;;;Odměny 7/25;Odměny;Odměny členům výboru;;;;;výchozí;;-32112.0;32112.0
 Doklad;2025-08-01;;;;Teplo 08/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-175500.0;175500.0
+Doklad;2025-08-01;;;;Odměny 7/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-3600.0;3600.0
+Doklad;2025-08-01;;;;Odměny 7/25 - OSSZ - Sociální pojištění;Odměny;Odměny členům výboru;;;1182281731.0;;výchozí;;-7656.0;7656.0
+Doklad;2025-08-01;;;;Odměny 7/25 - VZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-2160.0;2160.0
+Doklad;2025-08-01;;;;Odměny 7/25 - OZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-1080.0;1080.0
+Doklad;2025-08-01;;;;Odměny 7/25 - Holešáková Petra;Odměny;Odměny členům výboru;;;251900047.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-08-01;;;;Odměny 7/25 - Sekničková Jana;Odměny;Odměny členům výboru;;;251900048.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-08-01;;;;Odměny 7/25 - Kundrát Jan;Odměny;Odměny členům výboru;;;251900049.0;;výchozí;;-5872.0;5872.0
 Doklad;2025-07-31;;;;Správa 7/25;TVO Europe Holdings a.s.;Správní poplatek - byt;;;25990460.0;správa-Dům;výchozí;;-154179.85;44478.31
 Doklad;2025-07-31;;;;Správa 7/25;TVO Europe Holdings a.s.;Správní poplatek - garážové stání;;;25990460.0;správa-GS;výchozí;;-154179.85;8797.31
 Doklad;2025-07-31;;;;Správa 7/25;TVO Europe Holdings a.s.;Správní poplatek - sklep;;;25990460.0;správa-Sklep;výchozí;;-154179.85;8141.61
 Doklad;2025-07-31;;;;Správa 7/25;TVO Europe Holdings a.s.;Odvoz odpadu;;;25990460.0;odvozOdpadu;výchozí;;-154179.85;3902.98
 Doklad;2025-07-31;;;;Správa 7/25;TVO Europe Holdings a.s.;Technická správa;;;25990460.0;Tech-spr;výchozí;;-154179.85;49723.9
 Doklad;2025-07-31;;;;Správa 7/25;TVO Europe Holdings a.s.;Úklid - dům;;;25990460.0;úklid-Dům;výchozí;;-154179.85;39135.74
-Doklad;2025-07-31;;;;Patrol 7/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602001591.0;revize-servis;výchozí;;-4008.49;4008.49
-Doklad;2025-07-31;;;;Patrol 7/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602001590.0;revize-servis;výchozí;;-616.74;616.74
+Doklad;2025-07-31;;;;Servis, revize a kontrola zařízení dálkového přenosu na PCO - 7/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602001591.0;revize-servis;výchozí;;-4008.49;4008.49
+Doklad;2025-07-31;;;;Napojení EPS na pult centralizované ochrany (PCO) - 7/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602001590.0;revize-servis;výchozí;;-616.74;616.74
 Účet;2025-07-31;;;FIO - SÚ;Nespárovaný příjem (| Připsaný úrok);;Fond oprav;;;0.0;;výchozí;;3928.24;-3928.24
 Účet;2025-07-31;;;FIO - SÚ;Nespárovaný výdaj (| Odvod daně z úroků);;Fond oprav;;;0.0;;výchozí;;-824.93;824.93
 Doklad;2025-07-24;;;;Dezinsekce;Libor Novák;Revize, servisy, prohlídky;;;250100173.0;revize-servis;výchozí;;-3025.0;3025.0
-Doklad;2025-07-23;;;;Materiál pro zalévání zahrady;BAUHAUS  k.s.;Materiál na údržbu;;;;material;výchozí;;-1018.0;1018.0
+Doklad;2025-07-23;;;;Materiál pro zalévání zahrady;BAUHAUS  k.s.;Péče o zeleň;;;;péčeZeleň;výchozí;;-1018.0;1018.0
 Doklad;2025-07-20;;;;Zahradnické práce;Ing. Jindřich Mládek;Péče o zeleň;;;2025097.0;péčeZeleň;výchozí;;-19565.0;19565.0
 Doklad;2025-07-07;;;;Strojové mytí garáží;RED UNICORN s.r.o.;Mytí garáží;;;20250022.0;úklid-GS;výchozí;;-33000.0;33000.0
-Doklad;2025-07-05;;;;Odměny 6/25;Odměny;Odměny členům výboru;;;;;výchozí;;-32112.0;32112.0
 Doklad;2025-07-02;;;;Dezinsekce;Radek Bláha;Revize, servisy, prohlídky;;;25166025.0;revize-servis;výchozí;;-1800.0;1800.0
 Doklad;2025-07-01;;;;PVK záloha 7-9/25;Pražské vodovody a kanalizace, a.s.;Zálohy - voda 2025;;;4001131376.0;;výchozí;;-449610.0;449610.0
 Doklad;2025-07-01;;;;Teplo 07/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-175500.0;175500.0
-Doklad;2025-06-30;;;;Patrol 6/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602001147.0;revize-servis;výchozí;;-616.74;616.74
-Doklad;2025-06-30;;;;Patrol 6/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602001148.0;revize-servis;výchozí;;-4008.49;4008.49
+Doklad;2025-07-01;;;;Odměny 6/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-3600.0;3600.0
+Doklad;2025-07-01;;;;Odměny 6/25 - OSSZ - Sociální pojištění;Odměny;Odměny členům výboru;;;1182281731.0;;výchozí;;-7656.0;7656.0
+Doklad;2025-07-01;;;;Odměny 6/25 - VZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-2160.0;2160.0
+Doklad;2025-07-01;;;;Odměny 6/25 - OZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-1080.0;1080.0
+Doklad;2025-07-01;;;;Odměny 6/25 - Holešáková Petra;Odměny;Odměny členům výboru;;;251900040.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-07-01;;;;Odměny 6/25 - Sekničková Jana;Odměny;Odměny členům výboru;;;251900041.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-07-01;;;;Odměny 6/25 - Kundrát Jan;Odměny;Odměny členům výboru;;;251900042.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-06-30;;;;Napojení EPS na pult centralizované ochrany (PCO) - 6/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602001147.0;revize-servis;výchozí;;-616.74;616.74
+Doklad;2025-06-30;;;;Servis, revize a kontrola zařízení dálkového přenosu na PCO - 6/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602001148.0;revize-servis;výchozí;;-4008.49;4008.49
 Doklad;2025-06-30;;;;Správa 6/25;TVO Europe Holdings a.s.;Správní poplatek - byt;;;25990398.0;správa-Dům;výchozí;;-162567.34;44478.31
 Doklad;2025-06-30;;;;Správa 6/25;TVO Europe Holdings a.s.;Správní poplatek - garážové stání;;;25990398.0;správa-GS;výchozí;;-162567.34;8797.31
 Doklad;2025-06-30;;;;Správa 6/25;TVO Europe Holdings a.s.;Správní poplatek - sklep;;;25990398.0;správa-Sklep;výchozí;;-162567.34;8141.61
@@ -97,14 +122,20 @@ Doklad;2025-06-20;;;;Lakování a montáž krycích plechů sloupku DT;Václav S
 Doklad;2025-06-17;;;;Přefakturace;TVO Europe Holdings a.s.;Ostatní náklady;;;25990363.0;nákladyProvozní;výchozí;;-6036.54;5742.0
 Doklad;2025-06-17;;;;Přefakturace;TVO Europe Holdings a.s.;Materiál na údržbu;;;25990363.0;material;výchozí;;-6036.54;294.54
 Doklad;2025-06-07;;;;Zahradnické práce;Ing. Jindřich Mládek;Péče o zeleň;;;2025072.0;péčeZeleň;výchozí;;-15135.0;15135.0
-Doklad;2025-06-05;;;;Odměny 5/25;Odměny;Odměny členům výboru;;;;;výchozí;;-32112.0;32112.0
 Doklad;2025-06-02;;;;Kontrola provozuschopnosti PBZ;G R A D U S, s.r.o.;Revize, servisy, prohlídky;;;1250321.0;revize-servis;výchozí;;-28556.0;28556.0
 Doklad;2025-06-02;;;;Vypracování PD;EQUANS Services a.s.;Wallboxy;;;4190027040.0;;výchozí;;-124267.0;124267.0
 Doklad;2025-06-01;;;;Teplo 06/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-175500.0;175500.0
 Doklad;2025-06-01;;;;Odpady 1.1.-30.6.;HLAVNÍ MĚSTO PRAHA;Odvoz odpadu;;;3000543145.0;odvozOdpadu;výchozí;;-171600.0;171600.0
 Doklad;2025-06-01;;;;Revize - dětské hřiště;Jiří Čáp;Revize, servisy, prohlídky;;;250506.0;revize-servis;výchozí;;-2299.0;2299.0
-Doklad;2025-05-31;;;;Patrol 5/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602000678.0;revize-servis;výchozí;;-4008.49;4008.49
-Doklad;2025-05-31;;;;Patrol 5/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602000677.0;revize-servis;výchozí;;-616.74;616.74
+Doklad;2025-06-01;;;;Odměny 5/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-3600.0;3600.0
+Doklad;2025-06-01;;;;Odměny 5/25 - OSSZ - Sociální pojištění;Odměny;Odměny členům výboru;;;1182281731.0;;výchozí;;-7656.0;7656.0
+Doklad;2025-06-01;;;;Odměny 5/25 - VZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-2160.0;2160.0
+Doklad;2025-06-01;;;;Odměny 5/25 - OZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-1080.0;1080.0
+Doklad;2025-06-01;;;;Odměny 5/25 - Holešáková Petra;Odměny;Odměny členům výboru;;;251900033.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-06-01;;;;Odměny 5/25 - Sekničková Jana;Odměny;Odměny členům výboru;;;251900034.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-06-01;;;;Odměny 5/25 - Kundrát Jan;Odměny;Odměny členům výboru;;;251900035.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-05-31;;;;Servis, revize a kontrola zařízení dálkového přenosu na PCO - 5/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602000678.0;revize-servis;výchozí;;-4008.49;4008.49
+Doklad;2025-05-31;;;;Napojení EPS na pult centralizované ochrany (PCO) - 5/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602000677.0;revize-servis;výchozí;;-616.74;616.74
 Doklad;2025-05-31;;;;Správa 5/25;TVO Europe Holdings a.s.;Správní poplatek - byt;;;25990330.0;správa-Dům;výchozí;;-162567.34;44478.31
 Doklad;2025-05-31;;;;Správa 5/25;TVO Europe Holdings a.s.;Správní poplatek - garážové stání;;;25990330.0;správa-GS;výchozí;;-162567.34;8797.31
 Doklad;2025-05-31;;;;Správa 5/25;TVO Europe Holdings a.s.;Správní poplatek - sklep;;;25990330.0;správa-Sklep;výchozí;;-162567.34;8141.61
@@ -125,10 +156,16 @@ Doklad;2025-05-18;;;;PRE 30504123;Pražská energetika, a.s.;Zálohy - elektro 2
 Doklad;2025-05-16;;;;Přefakturace;TVO Europe Holdings a.s.;Materiál na údržbu;;;25990293.0;material;výchozí;;-307.0;129.0
 Doklad;2025-05-16;;;;Přefakturace;TVO Europe Holdings a.s.;Ostatní náklady;;;25990293.0;nákladyProvozní;výchozí;;-307.0;178.0
 Doklad;2025-05-08;;;;Zahradnické práce;Ing. Jindřich Mládek;Péče o zeleň;;;2025043.0;péčeZeleň;výchozí;;-25312.0;25312.0
-Doklad;2025-05-05;;;;Odměny 4/25;Odměny;Odměny členům výboru;;;;;výchozí;;-32112.0;32112.0
 Doklad;2025-05-01;;;;Teplo 05/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-218400.0;218400.0
-Doklad;2025-04-30;;;;Patrol 4/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602000214.0;revize-servis;výchozí;;-616.74;616.74
-Doklad;2025-04-30;;;;Patrol 4/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602000215.0;revize-servis;výchozí;;-4008.49;4008.49
+Doklad;2025-05-01;;;;Odměny 4/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-3600.0;3600.0
+Doklad;2025-05-01;;;;Odměny 4/25 - OSSZ - Sociální pojištění;Odměny;Odměny členům výboru;;;1182281731.0;;výchozí;;-7656.0;7656.0
+Doklad;2025-05-01;;;;Odměny 4/25 - VZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-2160.0;2160.0
+Doklad;2025-05-01;;;;Odměny 4/25 - OZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-1080.0;1080.0
+Doklad;2025-05-01;;;;Odměny 4/25 - Holešáková Petra;Odměny;Odměny členům výboru;;;251900026.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-05-01;;;;Odměny 4/25 - Sekničková Jana;Odměny;Odměny členům výboru;;;251900027.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-05-01;;;;Odměny 4/25 - Kundrát Jan;Odměny;Odměny členům výboru;;;251900028.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-04-30;;;;Napojení EPS na pult centralizované ochrany (PCO) - 4/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602000214.0;revize-servis;výchozí;;-616.74;616.74
+Doklad;2025-04-30;;;;Servis, revize a kontrola zařízení dálkového přenosu na PCO - 4/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602000215.0;revize-servis;výchozí;;-4008.49;4008.49
 Doklad;2025-04-30;;;;Správa 4/25;TVO Europe Holdings a.s.;Správní poplatek - byt;;;25990254.0;správa-Dům;výchozí;;-162567.34;44478.31
 Doklad;2025-04-30;;;;Správa 4/25;TVO Europe Holdings a.s.;Správní poplatek - garážové stání;;;25990254.0;správa-GS;výchozí;;-162567.34;8797.31
 Doklad;2025-04-30;;;;Správa 4/25;TVO Europe Holdings a.s.;Správní poplatek - sklep;;;25990254.0;správa-Sklep;výchozí;;-162567.34;8141.61
@@ -147,10 +184,16 @@ Doklad;2025-04-07;;;;Zamykání;IPODEC - ČISTÉ MĚSTO a.s.;Odvoz odpadu;;;5411
 Doklad;2025-04-06;;;;Pojistné plnění;Česká podnikatelská pojišťovna, a.s., Vienna Insurance Group;Ostatní náklady;;;2254002676.0;nákladyProvozní;výchozí;;13826.0;-13826.0
 Doklad;2025-04-06;;;;Pojistné plnění;Allianz pojišťovna, a.s.;Ostatní náklady;;;250004711.0;nákladyProvozní;výchozí;;6343.0;-6343.0
 Doklad;2025-04-06;;;;Pojistné plnění - spoluúčast;Česká podnikatelská pojišťovna, a.s., Vienna Insurance Group;Ostatní náklady;;;2254002676.0;nákladyProvozní;výchozí;;5000.0;-5000.0
-Doklad;2025-04-05;;;;Odměny 3/25;Odměny;Odměny členům výboru;;;;;výchozí;;-32112.0;32112.0
 Doklad;2025-04-02;;;;Střežení objektu 4-6/25;Hasičský záchranný sbor hlavního města Prahy;Revize, servisy, prohlídky;;;404362025.0;revize-servis;výchozí;;-9405.0;9405.0
 Doklad;2025-04-01;;;;PVK záloha 4-6/25;Pražské vodovody a kanalizace, a.s.;Zálohy - voda 2025;;;4001131376.0;;výchozí;;-449610.0;449610.0
 Doklad;2025-04-01;;;;Teplo 04/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-368600.0;368600.0
+Doklad;2025-04-01;;;;Odměny 3/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-3600.0;3600.0
+Doklad;2025-04-01;;;;Odměny 3/25 - OSSZ - Sociální pojištění;Odměny;Odměny členům výboru;;;1182281731.0;;výchozí;;-7656.0;7656.0
+Doklad;2025-04-01;;;;Odměny 3/25 - VZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-2160.0;2160.0
+Doklad;2025-04-01;;;;Odměny 3/25 - OZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-1080.0;1080.0
+Doklad;2025-04-01;;;;Odměny 3/25 - Holešáková Petra;Odměny;Odměny členům výboru;;;251900019.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-04-01;;;;Odměny 3/25 - Sekničková Jana;Odměny;Odměny členům výboru;;;251900020.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-04-01;;;;Odměny 3/25 - Kundrát Jan;Odměny;Odměny členům výboru;;;251900021.0;;výchozí;;-5872.0;5872.0
 Doklad;2025-03-31;;;;Správa 3/25;TVO Europe Holdings a.s.;Správní poplatek - byt;;;25990187.0;správa-Dům;výchozí;;-152567.34;37246.02
 Doklad;2025-03-31;;;;Správa 3/25;TVO Europe Holdings a.s.;Správní poplatek - garážové stání;;;25990187.0;správa-GS;výchozí;;-152567.34;8591.12
 Doklad;2025-03-31;;;;Správa 3/25;TVO Europe Holdings a.s.;Správní poplatek - sklep;;;25990187.0;správa-Sklep;výchozí;;-152567.34;7950.79
@@ -160,8 +203,8 @@ Doklad;2025-03-31;;;;Správa 3/25;TVO Europe Holdings a.s.;Úklid - dům;;;25990
 Doklad;2025-03-31;;;;Správa 3/25;TVO Europe Holdings a.s.;Mytí garáží;;;25990187.0;úklid-GS;výchozí;;-152567.34;8190.93
 Doklad;2025-03-31;;;;Servis výtahů 1-3/25;KONE, a.s.;Výtah - provoz;;;800485772.0;výtah;výchozí;;-39792.29;17614.8
 Doklad;2025-03-31;;;;Servis výtahů 1-3/25;KONE, a.s.;Revize, servisy, prohlídky;;;800485772.0;revize-servis;výchozí;;-39792.29;22177.49
-Doklad;2025-03-31;;;;Patrol 3/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2502005969.0;revize-servis;výchozí;;-616.74;616.74
-Doklad;2025-03-31;;;;Patrol 3/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2502005970.0;revize-servis;výchozí;;-4008.49;4008.49
+Doklad;2025-03-31;;;;Napojení EPS na pult centralizované ochrany (PCO) - 3/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2502005969.0;revize-servis;výchozí;;-616.74;616.74
+Doklad;2025-03-31;;;;Servis, revize a kontrola zařízení dálkového přenosu na PCO - 3/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2502005970.0;revize-servis;výchozí;;-4008.49;4008.49
 Účet;2025-03-31;;;FIO - SÚ;Nespárovaný příjem (Připsaný úrok);;Fond oprav;;;0.0;;výchozí;;2198.7;-2198.7
 Účet;2025-03-31;;;FIO - SÚ;Nespárovaný výdaj (Odvod daně z úroků);;Fond oprav;;;0.0;;výchozí;;-461.72;461.72
 Doklad;2025-03-29;;;;Oprava a seřízení garážových vrat;Martin Schubert;Revize, servisy, prohlídky;;;1015200.0;revize-servis;výchozí;;-3024.0;3024.0
@@ -170,18 +213,24 @@ Doklad;2025-03-19;;;;Prohlídka - požární roleta;JaP - Jacina, s.r.o.;Revize,
 Doklad;2025-03-19;;;;Úklid sněhu + úklid štěrku;Zahradní realizace s.r.o.;Zimní úklid;;;125006.0;údržba-Komunikací;výchozí;;-17787.0;17787.0
 Doklad;2025-03-08;;;;Písek do dětského hřiště;.;Ostatní náklady;;;;nákladyProvozní;výchozí;;-3960.0;3960.0
 Doklad;2025-03-06;;;;UPS - prohlídka;UPS Technology s.r.o.;Revize, servisy, prohlídky;;;4925000276.0;revize-servis;výchozí;;-12487.2;12487.2
-Doklad;2025-03-05;;;;Odměny 2/25;Odměny;Odměny členům výboru;;;;;výchozí;;-32112.0;32112.0
-Doklad;2025-03-03;;;;Stykače - osvětlení garáží;OEM Automatic, spol. s r.o.;Ostatní náklady;;;2025025.0;nákladyProvozní;výchozí;;-5929.91;5929.91
+Doklad;2025-03-03;;;;Stykače - osvětlení garáží;OEM Automatic, spol. s r.o.;Materiál na údržbu;;;2025025.0;material;výchozí;;-5929.91;5929.91
 Doklad;2025-03-01;;;;Teplo 03/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-390100.0;390100.0
 Doklad;2025-03-01;;;;Pojistné plnění;Allianz pojišťovna, a.s.;Ostatní náklady;;;250001572.0;nákladyProvozní;výchozí;;11367.0;-11367.0
 Doklad;2025-03-01;;;;Pojistné plnění;ČSOB Pojišťovna, a. s., člen holdingu ČSOB;Ostatní náklady;;;2234040532.0;nákladyProvozní;výchozí;;35042.0;-35042.0
-Doklad;2025-02-28;;;;Patrol 2/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2502005456.0;revize-servis;výchozí;;-616.74;616.74
-Doklad;2025-02-28;;;;Patrol 2/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2502005457.0;revize-servis;výchozí;;-4008.49;4008.49
+Doklad;2025-03-01;;;;Odměny 2/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-3600.0;3600.0
+Doklad;2025-03-01;;;;Odměny 2/25 - OSSZ - Sociální pojištění;Odměny;Odměny členům výboru;;;1182281731.0;;výchozí;;-7656.0;7656.0
+Doklad;2025-03-01;;;;Odměny 2/25 - VZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-2160.0;2160.0
+Doklad;2025-03-01;;;;Odměny 2/25 - OZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-1080.0;1080.0
+Doklad;2025-03-01;;;;Odměny 2/25 - Holešáková Petra;Odměny;Odměny členům výboru;;;251900012.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-03-01;;;;Odměny 2/25 - Sekničková Jana;Odměny;Odměny členům výboru;;;251900013.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-03-01;;;;Odměny 2/25 - Kundrát Jan;Odměny;Odměny členům výboru;;;251900014.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-02-28;;;;Napojení EPS na pult centralizované ochrany (PCO) - 2/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2502005456.0;revize-servis;výchozí;;-616.74;616.74
+Doklad;2025-02-28;;;;Servis, revize a kontrola zařízení dálkového přenosu na PCO - 2/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2502005457.0;revize-servis;výchozí;;-4008.49;4008.49
 Doklad;2025-02-28;;;;Mail hosting - únor;Paddle.com Market Ltd;Ostatní náklady;;;1.0;nákladyProvozní;výchozí;;-450.0;450.0
 Doklad;2025-02-28;;;;Mail hosting - 2025;Paddle.com Market Ltd;Ostatní náklady;;;1.0;nákladyProvozní;výchozí;;-4198.29;4198.29
 Doklad;2025-02-28;;;;Doména hraseho.cz;WEDOS, a.s.;Ostatní náklady;;;7425035328.0;nákladyProvozní;výchozí;;-175.45;175.45
-Doklad;2025-02-28;;;;Škrabáky - p. Georgiev;p. Georgiev;Materiál na údržbu;;;1.0;material;výchozí;;-2863.0;1363.0
-Doklad;2025-02-28;;;;Škrabáky - p. Georgiev;p. Georgiev;Ostatní náklady;;;1.0;nákladyProvozní;výchozí;;-2863.0;1500.0
+Doklad;2025-02-28;;;;Škrabáky - p. Georgiev;BAUHAUS  k.s.;Materiál na údržbu;;;1.0;material;výchozí;;-2863.0;1363.0
+Doklad;2025-02-28;;;;Škrabáky - p. Georgiev;BAUHAUS  k.s.;Ostatní náklady;;;1.0;nákladyProvozní;výchozí;;-2863.0;1500.0
 Doklad;2025-02-28;;;;Správa 2/25;TVO Europe Holdings a.s.;Správní poplatek - byt;;;25990119.0;správa-Dům;výchozí;;-158757.17;43435.85
 Doklad;2025-02-28;;;;Správa 2/25;TVO Europe Holdings a.s.;Správní poplatek - garážové stání;;;25990119.0;správa-GS;výchozí;;-158757.17;8591.12
 Doklad;2025-02-28;;;;Správa 2/25;TVO Europe Holdings a.s.;Správní poplatek - sklep;;;25990119.0;správa-Sklep;výchozí;;-158757.17;7950.79
@@ -197,6 +246,13 @@ Doklad;2025-02-14;;;;Přefakturace;TVO Europe Holdings a.s.;Ostatní náklady;;;
 Doklad;2025-02-07;;;;Odstranění následků havárie topení;SOLITER parket s.r.o.;Ostatní náklady;;;250200039.0;nákladyProvozní;výchozí;;-12367.0;12367.0
 Doklad;2025-02-05;;;;Revize - záchytný systém;TOPWET s.r.o.;Revize, servisy, prohlídky;;;11921335.0;revize-servis;výchozí;;-15004.0;15004.0
 Doklad;2025-02-01;;;;Ověření podpisu;Česká pošta, s.p.;Ostatní náklady;;;1.0;nákladyProvozní;výchozí;;-50.0;50.0
+Doklad;2025-02-01;;;;Odměny 1/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-3600.0;3600.0
+Doklad;2025-02-01;;;;Odměny 1/25 - OSSZ - Sociální pojištění;Odměny;Odměny členům výboru;;;1182281731.0;;výchozí;;-7656.0;7656.0
+Doklad;2025-02-01;;;;Odměny 1/25 - VZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-2160.0;2160.0
+Doklad;2025-02-01;;;;Odměny 1/25 - OZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-1080.0;1080.0
+Doklad;2025-02-01;;;;Odměny 1/25 - Holešáková Petra;Odměny;Odměny členům výboru;;;251900005.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-02-01;;;;Odměny 1/25 - Sekničková Jana;Odměny;Odměny členům výboru;;;251900006.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-02-01;;;;Odměny 1/25 - Kundrát Jan;Odměny;Odměny členům výboru;;;251900007.0;;výchozí;;-5872.0;5872.0
 Doklad;2025-01-31;;;;Správa 1/25;TVO Europe Holdings a.s.;Správní poplatek - byt;;;25990033.0;správa-Dům;výchozí;;-158757.17;43435.85
 Doklad;2025-01-31;;;;Správa 1/25;TVO Europe Holdings a.s.;Správní poplatek - garážové stání;;;25990033.0;správa-GS;výchozí;;-158757.17;8591.12
 Doklad;2025-01-31;;;;Správa 1/25;TVO Europe Holdings a.s.;Správní poplatek - sklep;;;25990033.0;správa-Sklep;výchozí;;-158757.17;7950.79
@@ -204,18 +260,17 @@ Doklad;2025-01-31;;;;Správa 1/25;TVO Europe Holdings a.s.;Odvoz odpadu;;;259900
 Doklad;2025-01-31;;;;Správa 1/25;TVO Europe Holdings a.s.;Technická správa;;;25990033.0;Tech-spr;výchozí;;-158757.17;48558.5
 Doklad;2025-01-31;;;;Správa 1/25;TVO Europe Holdings a.s.;Úklid - dům;;;25990033.0;úklid-Dům;výchozí;;-158757.17;38218.48
 Doklad;2025-01-31;;;;Správa 1/25;TVO Europe Holdings a.s.;Mytí garáží;;;25990033.0;úklid-GS;výchozí;;-158757.17;8190.93
-Doklad;2025-01-31;;;;Patrol 1/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2502004937.0;revize-servis;výchozí;;-4008.49;4008.49
-Doklad;2025-01-31;;;;Patrol 1/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2502004936.0;revize-servis;výchozí;;-616.74;616.74
+Doklad;2025-01-31;;;;Servis, revize a kontrola zařízení dálkového přenosu na PCO - 1/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2502004937.0;revize-servis;výchozí;;-4008.49;4008.49
+Doklad;2025-01-31;;;;Napojení EPS na pult centralizované ochrany (PCO) - 1/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2502004936.0;revize-servis;výchozí;;-616.74;616.74
 Účet;2025-01-31;;;FIO - SÚ;Nespárovaný příjem (Připsaný úrok);;Fond oprav;;;0.0;;výchozí;;2606.92;-2606.92
 Účet;2025-01-31;;;FIO - SÚ;Nespárovaný výdaj (Odvod daně z úroků);;Fond oprav;;;0.0;;výchozí;;-547.45;547.45
 Doklad;2025-01-17;;;;TVO - přefakturace;TVO Europe Holdings a.s.;Materiál na údržbu;;;25990007.0;material;výchozí;;-1153.28;1153.28
 Doklad;2025-01-15;;;;Teplo 02/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-454400.0;454400.0
-Doklad;2025-01-15;;;;Odměny 1/25;Odměny;Odměny členům výboru;;;;;výchozí;;-32112.0;32112.0
 Doklad;2025-01-04;;;;Střežení objektu 1-3/25;Hasičský záchranný sbor hlavního města Prahy;Revize, servisy, prohlídky;;;401172025.0;revize-servis;výchozí;;-9405.0;9405.0
 Doklad;2025-01-01;;;;PVK záloha 1-3/25;Pražské vodovody a kanalizace, a.s.;Zálohy - voda 2025;;;4001131376.0;;výchozí;;-449610.0;449610.0
 Doklad;2025-01-01;;;;Teplo 01/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-561700.0;561700.0
 Doklad;2025-01-01;;;;Sousedé;SousedeCZ s.r.o.;Ostatní náklady;;;906078001.0;nákladyProvozní;výchozí;;-35520.0;35520.0
 Doklad;2025-01-01;;;;Pojištění 14.2.2025-14.2.-2026;Allianz pojišťovna, a.s.;Pojištění budovy;;;555018476.0;pojištěníBudovy;výchozí;;-121665.0;106665.21
-Doklad;2025-01-01;;;;p. Kundrát - posyp;.;Ostatní náklady;;;;nákladyProvozní;výchozí;;-575.0;575.0
+Doklad;2025-01-01;;;;Posypový materiál;BAUHAUS  k.s.;Zimní úklid;;;;údržba-Komunikací;výchozí;;-575.0;575.0
 Doklad;2024-12-31;;;;Pojištění 14.2.2024-14.2.-2025;Allianz pojišťovna, a.s.;Pojištění budovy;;;;381;výchozí;;-110244.0;13253.0
-;;;;;;;;;;;;;;-17743387.939999994;9440578.790000007
+;;;;;;;;;;;;;;-17761910.939999994;9459101.790000007
