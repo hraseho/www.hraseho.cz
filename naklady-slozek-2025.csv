@@ -182,7 +182,7 @@ Doklad;2025-04-09;;;;Oprava výtahu;KONE, a.s.;Fond oprav;;;95096491.0;;výchoz�
 Doklad;2025-04-07;;;;Zamykání;IPODEC - ČISTÉ MĚSTO a.s.;Odvoz odpadu;;;5411002381.0;odvozOdpadu;výchozí;;-1118.04;1118.04
 Doklad;2025-04-07;;;;Zamykání;IPODEC - ČISTÉ MĚSTO a.s.;Odvoz odpadu;;;5411002380.0;odvozOdpadu;výchozí;;-2236.08;2236.08
 Doklad;2025-04-06;;;;Pojistné plnění;Česká podnikatelská pojišťovna, a.s., Vienna Insurance Group;Ostatní náklady;;;2254002676.0;nákladyProvozní;výchozí;;13826.0;-13826.0
-Doklad;2025-04-06;;;;Pojistné plnění;Allianz pojišťovna, a.s.;Ostatní náklady;;;250004711.0;nákladyProvozní;výchozí;;6343.0;-6343.0
+Doklad;2025-04-06;;;;Pojistné plnění k FA 250200155;Allianz pojišťovna, a.s.;Ostatní náklady;;;250004711.0;nákladyProvozní;výchozí;;6343.0;-6343.0
 Doklad;2025-04-06;;;;Pojistné plnění - spoluúčast;Česká podnikatelská pojišťovna, a.s., Vienna Insurance Group;Ostatní náklady;;;2254002676.0;nákladyProvozní;výchozí;;5000.0;-5000.0
 Doklad;2025-04-02;;;;Střežení objektu 4-6/25;Hasičský záchranný sbor hlavního města Prahy;Revize, servisy, prohlídky;;;404362025.0;revize-servis;výchozí;;-9405.0;9405.0
 Doklad;2025-04-01;;;;PVK záloha 4-6/25;Pražské vodovody a kanalizace, a.s.;Zálohy - voda 2025;;;4001131376.0;;výchozí;;-449610.0;449610.0
@@ -215,8 +215,8 @@ Doklad;2025-03-08;;;;Písek do dětského hřiště;.;Ostatní náklady;;;;nákl
 Doklad;2025-03-06;;;;UPS - prohlídka;UPS Technology s.r.o.;Revize, servisy, prohlídky;;;4925000276.0;revize-servis;výchozí;;-12487.2;12487.2
 Doklad;2025-03-03;;;;Stykače - osvětlení garáží;OEM Automatic, spol. s r.o.;Materiál na údržbu;;;2025025.0;material;výchozí;;-5929.91;5929.91
 Doklad;2025-03-01;;;;Teplo 03/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-390100.0;390100.0
-Doklad;2025-03-01;;;;Pojistné plnění;Allianz pojišťovna, a.s.;Ostatní náklady;;;250001572.0;nákladyProvozní;výchozí;;11367.0;-11367.0
-Doklad;2025-03-01;;;;Pojistné plnění;ČSOB Pojišťovna, a. s., člen holdingu ČSOB;Ostatní náklady;;;2234040532.0;nákladyProvozní;výchozí;;35042.0;-35042.0
+Doklad;2025-03-01;;;;Pojistné plnění k FA 250200039;Allianz pojišťovna, a.s.;Ostatní náklady;;;250001572.0;nákladyProvozní;výchozí;;11367.0;-11367.0
+Doklad;2025-03-01;;;;Pojistné plnění k FA 2300065, 10;ČSOB Pojišťovna, a. s., člen holdingu ČSOB;Ostatní náklady;;;2234040532.0;nákladyProvozní;výchozí;;35042.0;-35042.0
 Doklad;2025-03-01;;;;Odměny 2/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-3600.0;3600.0
 Doklad;2025-03-01;;;;Odměny 2/25 - OSSZ - Sociální pojištění;Odměny;Odměny členům výboru;;;1182281731.0;;výchozí;;-7656.0;7656.0
 Doklad;2025-03-01;;;;Odměny 2/25 - VZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-2160.0;2160.0
