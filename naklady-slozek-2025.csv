@@ -9,6 +9,9 @@ Doklad;2025-11-23;;;;PRE 30504122;Pražská energetika, a.s.;Zálohy - elektro 2
 Doklad;2025-11-22;;;;PRE 30504109;Pražská energetika, a.s.;Zálohy - elektro 2025;;;30504109.0;;výchozí;;-14280.0;14280.0
 Doklad;2025-11-22;;;;PRE 30504123;Pražská energetika, a.s.;Zálohy - elektro 2025;;;30504123.0;;výchozí;;-8050.0;8050.0
 Doklad;2025-11-01;;;;Teplo 11/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-475900.0;475900.0
+Doklad;2025-10-24;;;;Revize - akumulační nádrž;Miloš Kraus;Revize, servisy, prohlídky;;;812025.0;revize-servis;výchozí;;-3146.0;3146.0
+Doklad;2025-10-24;;;;Kontrola provozuschopnosti SHZ;TPI Česká republika s.r.o.;Revize, servisy, prohlídky;;;9552503209.0;revize-servis;výchozí;;-16716.15;16716.15
+Doklad;2025-10-22;;;;Kontrola a údržba EPS;ARYKA IN-WEST a.s.;Revize, servisy, prohlídky;;;112502040.0;revize-servis;výchozí;;-31387.4;31387.4
 Doklad;2025-10-17;;;;Pojistné plnění;Allianz pojišťovna, a.s.;Ostatní náklady;;;250017034.0;nákladyProvozní;výchozí;;13190.0;-13190.0
 Doklad;2025-10-09;;2025001.0;;Přefakturace - planý výjezd;Duffková Vendula;Ostatní náklady;;;2025001.0;nákladyProvozní;výchozí;;2955.0;-2955.0
 Doklad;2025-10-09;;;;Zahradnické práce;Ing. Jindřich Mládek;Péče o zeleň;;;2025138.0;péčeZeleň;výchozí;;-18523.0;18523.0
@@ -274,4 +277,4 @@ Doklad;2025-01-01;;;;Sousedé;SousedeCZ s.r.o.;Ostatní náklady;;;906078001.0;n
 Doklad;2025-01-01;;;;Pojištění 14.2.2025-14.2.-2026;Allianz pojišťovna, a.s.;Pojištění budovy;;;555018476.0;pojištěníBudovy;výchozí;;-121665.0;106665.21
 Doklad;2025-01-01;;;;Posypový materiál;BAUHAUS  k.s.;Zimní úklid;;;;údržba-Komunikací;výchozí;;-575.0;575.0
 Doklad;2024-12-31;;;;Pojištění 14.2.2024-14.2.-2025;Allianz pojišťovna, a.s.;Pojištění budovy;;;;381;výchozí;;-110244.0;13253.0
-;;;;;;;;;;;;;;-17748720.939999994;9445911.790000007
+;;;;;;;;;;;;;;-17799970.489999995;9497161.340000007
