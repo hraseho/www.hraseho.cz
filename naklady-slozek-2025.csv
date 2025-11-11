@@ -8,8 +8,27 @@ Doklad;2025-11-23;;;;PRE 30504120;Pražská energetika, a.s.;Zálohy - elektro 2
 Doklad;2025-11-23;;;;PRE 30504122;Pražská energetika, a.s.;Zálohy - elektro 2025;;;30504122.0;;výchozí;;-8620.0;8620.0
 Doklad;2025-11-22;;;;PRE 30504109;Pražská energetika, a.s.;Zálohy - elektro 2025;;;30504109.0;;výchozí;;-14280.0;14280.0
 Doklad;2025-11-22;;;;PRE 30504123;Pražská energetika, a.s.;Zálohy - elektro 2025;;;30504123.0;;výchozí;;-8050.0;8050.0
+Doklad;2025-11-10;;;;Měření tlaku vody;Pražské vodovody a kanalizace, a.s.;Revize, servisy, prohlídky;;;125007016.0;revize-servis;výchozí;;-9438.0;9438.0
 Doklad;2025-11-01;;;;Teplo 11/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-475900.0;475900.0
+Doklad;2025-11-01;;;;Odměny 10/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-3600.0;3600.0
+Doklad;2025-11-01;;;;Odměny 10/25 - OSSZ - Sociální pojištění;Odměny;Odměny členům výboru;;;1182281731.0;;výchozí;;-7656.0;7656.0
+Doklad;2025-11-01;;;;Odměny 10/25 - VZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-2160.0;2160.0
+Doklad;2025-11-01;;;;Odměny 10/25 - OZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-1080.0;1080.0
+Doklad;2025-11-01;;;;Odměny 10/25 - Holešáková Petra;Odměny;Odměny členům výboru;;;251900068.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-11-01;;;;Odměny 10/25 - Sekničková Jana;Odměny;Odměny členům výboru;;;251900069.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-11-01;;;;Odměny 10/25 - Kundrát Jan;Odměny;Odměny členům výboru;;;251900070.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-10-31;;;;Správa 10/25;TVO Europe Holdings a.s.;Správní poplatek - byt;;;25990654.0;správa-Dům;výchozí;;-154179.85;44478.31
+Doklad;2025-10-31;;;;Správa 10/25;TVO Europe Holdings a.s.;Správní poplatek - garážové stání;;;25990654.0;správa-GS;výchozí;;-154179.85;8797.31
+Doklad;2025-10-31;;;;Správa 10/25;TVO Europe Holdings a.s.;Správní poplatek - sklep;;;25990654.0;správa-Sklep;výchozí;;-154179.85;8141.61
+Doklad;2025-10-31;;;;Správa 10/25;TVO Europe Holdings a.s.;Odvoz odpadu;;;25990654.0;odvozOdpadu;výchozí;;-154179.85;3902.98
+Doklad;2025-10-31;;;;Správa 10/25;TVO Europe Holdings a.s.;Technická správa;;;25990654.0;Tech-spr;výchozí;;-154179.85;49723.9
+Doklad;2025-10-31;;;;Správa 10/25;TVO Europe Holdings a.s.;Úklid - dům;;;25990654.0;úklid-Dům;výchozí;;-154179.85;39135.74
+Doklad;2025-10-31;;;;Koordinační zkouška PBZ;STAPA - Pavel STAŠ;Revize, servisy, prohlídky;;;25010243.0;revize-servis;výchozí;;-4961.0;4961.0
+Doklad;2025-10-31;;;;Servis, revize a kontrola zařízení dálkového přenosu na PCO - 10/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602002828.0;revize-servis;výchozí;;-3932.5;3932.5
+Účet;2025-10-31;;;FIO - SÚ;Nespárovaný příjem (Připsaný úrok);;Fond oprav;;;0.0;;výchozí;;5675.18;-5675.18
+Účet;2025-10-31;;;FIO - SÚ;Nespárovaný výdaj (Odvod daně z úroků);;Fond oprav;;;0.0;;výchozí;;-1191.78;1191.78
 Doklad;2025-10-30;;;;Odstranění poškození Cetris desek;Jan Zimmel;Ostatní náklady;;;262025.0;nákladyProvozní;výchozí;;-14190.0;14190.0
+Doklad;2025-10-29;;;;Revize - hromosvod;HEPraha s.r.o.;Revize, servisy, prohlídky;;;2025110.0;revize-servis;výchozí;;-21175.0;21175.0
 Doklad;2025-10-24;;;;Revize - akumulační nádrž;Miloš Kraus;Revize, servisy, prohlídky;;;812025.0;revize-servis;výchozí;;-3146.0;3146.0
 Doklad;2025-10-24;;;;Kontrola provozuschopnosti SHZ;TPI Česká republika s.r.o.;Revize, servisy, prohlídky;;;9552503209.0;revize-servis;výchozí;;-16716.15;16716.15
 Doklad;2025-10-22;;;;Kontrola a údržba EPS;ARYKA IN-WEST a.s.;Revize, servisy, prohlídky;;;112502040.0;revize-servis;výchozí;;-31387.4;31387.4
@@ -278,4 +297,4 @@ Doklad;2025-01-01;;;;Sousedé;SousedeCZ s.r.o.;Ostatní náklady;;;906078001.0;n
 Doklad;2025-01-01;;;;Pojištění 14.2.2025-14.2.-2026;Allianz pojišťovna, a.s.;Pojištění budovy;;;555018476.0;pojištěníBudovy;výchozí;;-121665.0;106665.21
 Doklad;2025-01-01;;;;Posypový materiál;BAUHAUS  k.s.;Zimní úklid;;;;údržba-Komunikací;výchozí;;-575.0;575.0
 Doklad;2024-12-31;;;;Pojištění 14.2.2024-14.2.-2025;Allianz pojišťovna, a.s.;Pojištění budovy;;;;381;výchozí;;-110244.0;13253.0
-;;;;;;;;;;;;;;-17814160.489999995;9511351.340000007
+;;;;;;;;;;;;;;-18806374.689999986;9732666.290000007
