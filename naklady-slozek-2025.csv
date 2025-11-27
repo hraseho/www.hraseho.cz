@@ -1,5 +1,7 @@
 Typ;Datum;Zákazník;Číslo;Účet;Název;Dodavatel;Složka;Spotřeba;Spotřeba MJ;Var. symbol;Předkontace;Zdroj předkontace;Cíl nákladu;Částka dokladu;Částka nákladu
 Doklad;2025-12-01;;;;Teplo 12/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-561700.0;561700.0
+Doklad;2025-11-26;;;;Odečtové zařízení - kalorimetry;SGE STAVEBNÍ s.r.o.;Fond oprav;;;20250864.0;;výchozí;;-14399.0;14399.0
+Doklad;2025-11-25;;;;Výměna kalorimetrů;SGE STAVEBNÍ s.r.o.;Fond oprav;;;20250814.0;;výchozí;;-510276.48;510276.48
 Doklad;2025-11-23;;;;PRE 30504124;Pražská energetika, a.s.;Zálohy - elektro 2025;;;30504124.0;;výchozí;;-11050.0;11050.0
 Doklad;2025-11-23;;;;PRE 30504125;Pražská energetika, a.s.;Zálohy - elektro 2025;;;30504125.0;;výchozí;;-33400.0;33400.0
 Doklad;2025-11-23;;;;PRE 30504126;Pražská energetika, a.s.;Zálohy - elektro 2025;;;30504126.0;;výchozí;;-4120.0;4120.0
@@ -8,6 +10,10 @@ Doklad;2025-11-23;;;;PRE 30504120;Pražská energetika, a.s.;Zálohy - elektro 2
 Doklad;2025-11-23;;;;PRE 30504122;Pražská energetika, a.s.;Zálohy - elektro 2025;;;30504122.0;;výchozí;;-8620.0;8620.0
 Doklad;2025-11-22;;;;PRE 30504109;Pražská energetika, a.s.;Zálohy - elektro 2025;;;30504109.0;;výchozí;;-14280.0;14280.0
 Doklad;2025-11-22;;;;PRE 30504123;Pražská energetika, a.s.;Zálohy - elektro 2025;;;30504123.0;;výchozí;;-8050.0;8050.0
+Doklad;2025-11-19;;;;Shromáždění - pronájem;Psychiatrická nemocnice Bohnice;Ostatní náklady;;;2524400036.0;nákladyProvozní;výchozí;;-7300.0;7300.0
+Doklad;2025-11-14;;;;Přefakturace;TVO Europe Holdings a.s.;Materiál na údržbu;;;25990707.0;material;výchozí;;-324.0;294.0
+Doklad;2025-11-14;;;;Přefakturace;TVO Europe Holdings a.s.;Ostatní náklady;;;25990707.0;nákladyProvozní;výchozí;;-324.0;30.0
+Doklad;2025-11-12;;;;Deratizace;Radek Bláha;Revize, servisy, prohlídky;;;25276025.0;revize-servis;výchozí;;-2960.0;2960.0
 Doklad;2025-11-10;;;;Měření tlaku vody;Pražské vodovody a kanalizace, a.s.;Revize, servisy, prohlídky;;;125007016.0;revize-servis;výchozí;;-9438.0;9438.0
 Doklad;2025-11-01;;;;Teplo 11/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-475900.0;475900.0
 Doklad;2025-11-01;;;;Odměny 10/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-3600.0;3600.0
@@ -297,4 +303,4 @@ Doklad;2025-01-01;;;;Sousedé;SousedeCZ s.r.o.;Ostatní náklady;;;906078001.0;n
 Doklad;2025-01-01;;;;Pojištění 14.2.2025-14.2.-2026;Allianz pojišťovna, a.s.;Pojištění budovy;;;555018476.0;pojištěníBudovy;výchozí;;-121665.0;106665.21
 Doklad;2025-01-01;;;;Posypový materiál;BAUHAUS  k.s.;Zimní úklid;;;;údržba-Komunikací;výchozí;;-575.0;575.0
 Doklad;2024-12-31;;;;Pojištění 14.2.2024-14.2.-2025;Allianz pojišťovna, a.s.;Pojištění budovy;;;;381;výchozí;;-110244.0;13253.0
-;;;;;;;;;;;;;;-18806374.689999986;9732666.290000007
+;;;;;;;;;;;;;;-19341958.169999994;10267925.770000003
