@@ -1,5 +1,26 @@
 Typ;Datum;Zákazník;Číslo;Účet;Název;Dodavatel;Složka;Spotřeba;Spotřeba MJ;Var. symbol;Předkontace;Zdroj předkontace;Cíl nákladu;Částka dokladu;Částka nákladu
+Doklad;2025-12-12;;;;Výměna kabinového sedátka;KONE, a.s.;Výtah - provoz;;;95102839.0;výtah;výchozí;;-23479.68;23479.68
+Doklad;2025-12-11;;;;Rámečky pro vývěsky;A-Z Reklama CZ, s.r.o.;Ostatní náklady;;;25005780.0;nákladyProvozní;výchozí;;-3035.9;3035.9
+Doklad;2025-12-10;;;;Zahradnické práce;Ing. Jindřich Mládek;Péče o zeleň;;;2025177.0;péčeZeleň;výchozí;;-24909.0;24909.0
 Doklad;2025-12-01;;;;Teplo 12/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-561700.0;561700.0
+Doklad;2025-12-01;;;;Odměny 11/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-2400.0;2400.0
+Doklad;2025-12-01;;;;Odměny 11/25 - OSSZ - Sociální pojištění;Odměny;Odměny členům výboru;;;1182281731.0;;výchozí;;-5104.0;5104.0
+Doklad;2025-12-01;;;;Odměny 11/25 - VZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-1080.0;1080.0
+Doklad;2025-12-01;;;;Odměny 11/25 - OZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-1080.0;1080.0
+Doklad;2025-12-01;;;;Odměny 11/25 - Holešáková Petra;Odměny;Odměny členům výboru;;;251900075.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-12-01;;;;Odměny 11/25 - Kundrát Jan;Odměny;Odměny členům výboru;;;251900077.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-12-01;;;;Zimní údržba;RED UNICORN s.r.o.;Zimní úklid;;;20250085.0;údržba-Komunikací;výchozí;;-3000.0;3000.0
+Doklad;2025-12-01;;;;Strojové mytí garáží;RED UNICORN s.r.o.;Mytí garáží;;;20250084.0;úklid-GS;výchozí;;-33000.0;33000.0
+Doklad;2025-11-30;;;;Správa 11/25;TVO Europe Holdings a.s.;Správní poplatek - byt;;;25990738.0;správa-Dům;výchozí;;-154179.85;44478.31
+Doklad;2025-11-30;;;;Správa 11/25;TVO Europe Holdings a.s.;Správní poplatek - garážové stání;;;25990738.0;správa-GS;výchozí;;-154179.85;8797.31
+Doklad;2025-11-30;;;;Správa 11/25;TVO Europe Holdings a.s.;Správní poplatek - sklep;;;25990738.0;správa-Sklep;výchozí;;-154179.85;8141.61
+Doklad;2025-11-30;;;;Správa 11/25;TVO Europe Holdings a.s.;Odvoz odpadu;;;25990738.0;odvozOdpadu;výchozí;;-154179.85;3902.98
+Doklad;2025-11-30;;;;Správa 11/25;TVO Europe Holdings a.s.;Technická správa;;;25990738.0;Tech-spr;výchozí;;-154179.85;49723.9
+Doklad;2025-11-30;;;;Správa 11/25;TVO Europe Holdings a.s.;Úklid - dům;;;25990738.0;úklid-Dům;výchozí;;-154179.85;39135.74
+Doklad;2025-11-30;;;;Servis, revize a kontrola zařízení dálkového přenosu na PCO - 11/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602003226.0;revize-servis;výchozí;;-3932.5;3932.5
+Účet;2025-11-30;;;FIO - SÚ;Nespárovaný příjem (Připsaný úrok);;Fond oprav;;;0.0;;výchozí;;7005.38;-7005.38
+Účet;2025-11-30;;;FIO - SÚ;Nespárovaný výdaj (Odvod daně z úroků);;Fond oprav;;;0.0;;výchozí;;-1471.12;1471.12
+Doklad;2025-11-27;;;;Odpady 1.7.-31.12.;HLAVNÍ MĚSTO PRAHA;Odvoz odpadu;;;3000543145.0;odvozOdpadu;výchozí;;-171600.0;171600.0
 Doklad;2025-11-26;;;;Odečtové zařízení - kalorimetry;SGE STAVEBNÍ s.r.o.;Fond oprav;;;20250864.0;;výchozí;;-14399.0;14399.0
 Doklad;2025-11-25;;;;Výměna kalorimetrů;SGE STAVEBNÍ s.r.o.;Fond oprav;;;20250814.0;;výchozí;;-510276.48;510276.48
 Doklad;2025-11-23;;;;PRE 30504124;Pražská energetika, a.s.;Zálohy - elektro 2025;;;30504124.0;;výchozí;;-11050.0;11050.0
@@ -303,4 +324,4 @@ Doklad;2025-01-01;;;;Sousedé;SousedeCZ s.r.o.;Ostatní náklady;;;906078001.0;n
 Doklad;2025-01-01;;;;Pojištění 14.2.2025-14.2.-2026;Allianz pojišťovna, a.s.;Pojištění budovy;;;555018476.0;pojištěníBudovy;výchozí;;-121665.0;106665.21
 Doklad;2025-01-01;;;;Posypový materiál;BAUHAUS  k.s.;Zimní úklid;;;;údržba-Komunikací;výchozí;;-575.0;575.0
 Doklad;2024-12-31;;;;Pojištění 14.2.2024-14.2.-2025;Allianz pojišťovna, a.s.;Pojištění budovy;;;;381;výchozí;;-110244.0;13253.0
-;;;;;;;;;;;;;;-19341958.169999994;10267925.770000003
+;;;;;;;;;;;;;;-20545868.090000007;10700936.44
