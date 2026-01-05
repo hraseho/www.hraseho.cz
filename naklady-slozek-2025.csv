@@ -1,6 +1,27 @@
 Typ;Datum;Zákazník;Číslo;Účet;Název;Dodavatel;Složka;Spotřeba;Spotřeba MJ;Var. symbol;Předkontace;Zdroj předkontace;Cíl nákladu;Částka dokladu;Částka nákladu
+Doklad;2026-01-01;;;;Odměny 12/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-2400.0;2400.0
+Doklad;2026-01-01;;;;Odměny 12/25 - OSSZ - Sociální pojištění;Odměny;Odměny členům výboru;;;1182281731.0;;výchozí;;-5104.0;5104.0
+Doklad;2026-01-01;;;;Odměny 12/25 - VZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-1080.0;1080.0
+Doklad;2026-01-01;;;;Odměny 12/25 - OZP - Zdravotní pojištění;Odměny;Odměny členům výboru;;;1728467800.0;;výchozí;;-1080.0;1080.0
+Doklad;2026-01-01;;;;Odměny 12/25 - Holešáková Petra;Odměny;Odměny členům výboru;;;251900082.0;;výchozí;;-5872.0;5872.0
+Doklad;2026-01-01;;;;Odměny 12/25 - Kundrát Jan;Odměny;Odměny členům výboru;;;251900083.0;;výchozí;;-5872.0;5872.0
+Doklad;2025-12-31;;;;Servis, revize a kontrola zařízení dálkového přenosu na PCO - 12/25;PATROL group s.r.o.;Revize, servisy, prohlídky;;;2602003584.0;revize-servis;výchozí;;-3932.5;3932.5
+Doklad;2025-12-31;;;;Servis výtahů 10-12/25;KONE, a.s.;Výtah - provoz;;;800517985.0;výtah;výchozí;;-39792.29;17614.8
+Doklad;2025-12-31;;;;Servis výtahů 10-12/25;KONE, a.s.;Revize, servisy, prohlídky;;;800517985.0;revize-servis;výchozí;;-39792.29;22177.49
+Doklad;2025-12-31;;;;Správa 12/25;TVO Europe Holdings a.s.;Správní poplatek - byt;;;25990813.0;správa-Dům;výchozí;;-98269.12;44478.31
+Doklad;2025-12-31;;;;Správa 12/25;TVO Europe Holdings a.s.;Správní poplatek - garážové stání;;;25990813.0;správa-GS;výchozí;;-98269.12;8797.31
+Doklad;2025-12-31;;;;Správa 12/25;TVO Europe Holdings a.s.;Správní poplatek - sklep;;;25990813.0;správa-Sklep;výchozí;;-98269.12;8141.61
+Doklad;2025-12-31;;;;Správa 12/25;TVO Europe Holdings a.s.;Odvoz odpadu;;;25990813.0;odvozOdpadu;výchozí;;-98269.12;3902.98
+Doklad;2025-12-31;;;;Správa 12/25;TVO Europe Holdings a.s.;Technická správa;;;25990813.0;Tech-spr;výchozí;;-98269.12;49723.9
+Doklad;2025-12-31;;;;Správa 12/25;TVO Europe Holdings a.s.;Mytí garáží;;;25990813.0;úklid-GS;výchozí;;-98269.12;-16774.99
+Doklad;2025-12-30;;;;Oprava - výtah;KONE, a.s.;Výtah - provoz;;;740205215.0;výtah;výchozí;;-1230.88;1230.88
+Doklad;2025-12-23;;;;Ověření podpisu + konverze;Česká pošta, s.p.;Ostatní náklady;;;1.0;nákladyProvozní;výchozí;;-80.0;80.0
+Doklad;2025-12-19;;;;Shromáždění - el. hlasování, zápis;JS-hlasování s.r.o.;Ostatní náklady;;;102052025.0;nákladyProvozní;výchozí;;-13500.0;13500.0
+Doklad;2025-12-18;;;;Přefakturace;TVO Europe Holdings a.s.;Materiál na údržbu;;;25990800.0;material;výchozí;;-761.0;761.0
+Doklad;2025-12-16;;;;Revize NN - RP + UPS;Miloš Kraus;Revize, servisy, prohlídky;;;1012025.0;revize-servis;výchozí;;-6473.5;6473.5
 Doklad;2025-12-12;;;;Výměna kabinového sedátka;KONE, a.s.;Výtah - provoz;;;95102839.0;výtah;výchozí;;-23479.68;23479.68
 Doklad;2025-12-11;;;;Rámečky pro vývěsky;A-Z Reklama CZ, s.r.o.;Ostatní náklady;;;25005780.0;nákladyProvozní;výchozí;;-3035.9;3035.9
+Doklad;2025-12-11;;;;Oprava parapetu;Josef Čubák;Ostatní náklady;;;312025.0;nákladyProvozní;výchozí;;-10976.0;10976.0
 Doklad;2025-12-10;;;;Zahradnické práce;Ing. Jindřich Mládek;Péče o zeleň;;;2025177.0;péčeZeleň;výchozí;;-24909.0;24909.0
 Doklad;2025-12-01;;;;Teplo 12/2025;Veolia Energie ČR, a.s.;Zálohy - teplo 2025;;;6425125727.0;;výchozí;;-561700.0;561700.0
 Doklad;2025-12-01;;;;Odměny 11/25 - FÚ - Daň z příjmu;Odměny;Odměny členům výboru;;;17284678.0;;výchozí;;-2400.0;2400.0
@@ -324,4 +345,4 @@ Doklad;2025-01-01;;;;Sousedé;SousedeCZ s.r.o.;Ostatní náklady;;;906078001.0;n
 Doklad;2025-01-01;;;;Pojištění 14.2.2025-14.2.-2026;Allianz pojišťovna, a.s.;Pojištění budovy;;;555018476.0;pojištěníBudovy;výchozí;;-121665.0;106665.21
 Doklad;2025-01-01;;;;Posypový materiál;BAUHAUS  k.s.;Zimní úklid;;;;údržba-Komunikací;výchozí;;-575.0;575.0
 Doklad;2024-12-31;;;;Pojištění 14.2.2024-14.2.-2025;Allianz pojišťovna, a.s.;Pojištění budovy;;;;381;výchozí;;-110244.0;13253.0
-;;;;;;;;;;;;;;-20545868.090000007;10700936.44
+;;;;;;;;;;;;;;-21273429.270000007;10897359.729999999
