@@ -17,6 +17,9 @@ Doklad;2025-12-31;;;;Správa 12/25;TVO Europe Holdings a.s.;Správní poplatek -
 Doklad;2025-12-31;;;;Správa 12/25;TVO Europe Holdings a.s.;Odvoz odpadu;;;25990813.0;odvozOdpadu;výchozí;;-98269.12;3902.98
 Doklad;2025-12-31;;;;Správa 12/25;TVO Europe Holdings a.s.;Technická správa;;;25990813.0;Tech-spr;výchozí;;-98269.12;49723.9
 Doklad;2025-12-31;;;;Správa 12/25;TVO Europe Holdings a.s.;Mytí garáží;;;25990813.0;úklid-GS;výchozí;;-98269.12;-16774.99
+Doklad;2025-12-31;;;;Spoluúčast - sklep p. Gaňo;Allianz pojišťovna, a.s.;Ostatní náklady;;;250017372.0;nákladyProvozní;výchozí;;-10000.0;10000.0
+Účet;2025-12-31;;;FIO - SÚ;Nespárovaný příjem (Připsaný úrok);;Fond oprav;;;0.0;;výchozí;;7251.58;-7251.58
+Účet;2025-12-31;;;FIO - SÚ;Nespárovaný výdaj (Odvod daně z úroků);;Fond oprav;;;0.0;;výchozí;;-1522.83;1522.83
 Doklad;2025-12-30;;;;Oprava - výtah;KONE, a.s.;Výtah - provoz;;;740205215.0;výtah;výchozí;;-1230.88;1230.88
 Doklad;2025-12-23;;;;Ověření podpisu + konverze;Česká pošta, s.p.;Ostatní náklady;;;1.0;nákladyProvozní;výchozí;;-80.0;80.0
 Doklad;2025-12-19;;;;Shromáždění - el. hlasování, zápis;JS-hlasování s.r.o.;Ostatní náklady;;;102052025.0;nákladyProvozní;výchozí;;-13500.0;13500.0
@@ -348,4 +351,4 @@ Doklad;2025-01-01;;;;Sousedé;SousedeCZ s.r.o.;Ostatní náklady;;;906078001.0;n
 Doklad;2025-01-01;;;;Pojištění 14.2.2025-14.2.-2026;Allianz pojišťovna, a.s.;Pojištění budovy;;;555018476.0;pojištěníBudovy;výchozí;;-121665.0;106665.21
 Doklad;2025-01-01;;;;Posypový materiál;BAUHAUS  k.s.;Zimní úklid;;;;údržba-Komunikací;výchozí;;-575.0;575.0
 Doklad;2024-12-31;;;;Pojištění 14.2.2024-14.2.-2025;Allianz pojišťovna, a.s.;Pojištění budovy;;;;381;výchozí;;-110244.0;13253.0
-;;;;;;;;;;;;;;-21355929.270000007;10937359.729999999
+;;;;;;;;;;;;;;-21360200.520000007;10941630.979999999
